@@ -37,11 +37,7 @@ Appuyez sur une touche pour continuer...
 _Code :_
 ```java
 /*
-* @author ??
-*/
-
-/*
-* @author ??
+* @author Ewan QUELO
 */
 
 class Syntaxe{
