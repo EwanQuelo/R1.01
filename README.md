@@ -82,29 +82,149 @@ _Code :_
 * Permet le calcul de l'aire et du périmètre à partir du rayon fourni
 */
 
+/*
+* @author Ewan QUELO
+* Permet le calcul de l'aire et du périmètre à partir du rayon fourni
+*/
+
+/*
+* @author Ewan QUELO
+* Permet le calcul de l'aire et du périmètre à partir du rayon fourni
+*/
+
 class Cercle{
 	void principal(){
 		double rayon; 
 		double perimetre;
 		double aire;
 		
-		rayon = SimpleInput.getDouble("Rayon de votre cercle :");
+		rayon = SimpleInput.getDouble("Quel est le rayon de votre cercle en cm:");
 		
+		aire = rayon * rayon * Math.PI;
 		
-		}
+		System.out.println("L'aire de ce cercle est: " + aire + "scm");
+		
+		perimetre = Math.PI * 2 * rayon;
+		System.out.println("\nSon périmètre est le suivant: " + perimetre + "cm");
+		
+	}
 }
+
 
 
 ```
 _Exemple d'exécution 1_
 ```
+Quel est le rayon de votre cercle en cm:10
+L'aire de ce cercle est: 314.1592653589793scm
+
+Son périmètre est le suivant: 62.83185307179586cm
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+Quel est le rayon de votre cercle en cm:30
+L'aire de ce cercle est: 2827.4333882308138scm
+
+Son périmètre est le suivant: 188.49555921538757cm
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 3_
+```
+Quel est le rayon de votre cercle en cm:3 
+L'aire de ce cercle est: 28.274333882308138scm
+
+Son périmètre est le suivant: 18.84955592153876cm
+
+
+------------------
+(program exited with code: 0)
+
+```
+## Exercice 4
+_Code :_
+```java
+/*
+ * @author: Ewan QUELO
+ * Le joueur rentre un nombre de quilles renversés avec chacune des 2 boules
+ * */
+
+class Bowling{
+	void principal(){
+		int nbQui1;
+		int nbQui2;
+		int quilleActuelle = 10;
+		
+		nbQui1 = SimpleInput.getInt("Votre premier lancé :");
+		
+		if(nbQui1 > 10 || nbQui1 < 0) {
+			System.out.println("Vous avez rentré(e) un nombre incorrect !");
+		} else {
+			quilleActuelle = quilleActuelle - nbQui1;
+		
+			if(quilleActuelle == 0){
+				System.out.println("Strike !");
+			} else {
+				System.out.println("Il vous reste " + quilleActuelle + " quille(s) !" );
+				nbQui2 = SimpleInput.getInt("Votre Deuxième lancé :");
+			
+				if(quilleActuelle == 0) {
+					System.out.println("Spare !");
+				} else {
+					System.out.println("Dommage vous y étiez presque !");
+					System.out.println("Votre nombre total de quilles renversés est: " + (nbQui1 + nbQui2)+ "!");
+				}
+			} 
+		}
+	} 
+}
+```
+_Exemple d'exécution 1_
+```
+Votre premier lancé :1
+Il vous reste 9 quille(s) !
+Votre Deuxième lancé :3
+Dommage vous y étiez presque !
+Votre nombre total de quilles renversés est: 4!
+
+
+------------------
+(program exited with code: 0)
 
 ```
 _Exemple d'exécution 2_
 ```
+Votre premier lancé :-2
+Vous avez rentré(e) un nombre incorrect !
+
+
+------------------
+(program exited with code: 0)
 
 ```
-_Exemple d'exécution 3_
+## Exercice 5
+_Code :_
+```java
+
+
+```
+_Exemple d'exécution_
+```
+
+```
+## Exercice 6
+_Code :_
+```java
+
+
+```
+_Exemple d'exécution_
 ```
 
 ```
