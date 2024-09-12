@@ -211,11 +211,70 @@ Vous avez rentré(e) un nombre incorrect !
 ## Exercice 5
 _Code :_
 ```java
+/**
+* @author Ewan QUELO
+* L'utilisateur rentre un salaire brut, on calcul sa fiche de salaire et ses détails
+*/
+
+class Salaire{
+	void principal(){
+		double salaireUser;
+		
+		salaireUser = SimpleInput.getDouble("Rentrer votre salaire brut: ");
+		
+		double assuranceMaladie = salaireUser * 0.0075;
+		double assuranceVieilleDepla = salaireUser * 0.001;
+		double assuranceVieilllePla = salaireUser * 0.0675;
+		double fraisPro = salaireUser * 0.0175;
+		double contriSocialeGene = (salaireUser - fraisPro) * 0.075;
+		double crds = (salaireUser - fraisPro) * 0.005;
+		double chomage = salaireUser * 0.024;
+		
+		
+		
+		System.out.println("Voici votre fiche de paie");
+		/* On affiche le salaire brut */ 
+		System.out.println("Salaire brut:" + salaireUser);
+		
+		/* On affiche les prélèvements */ 
+		System.out.println("Assurance maladie:" + assuranceMaladie);
+		System.out.println("Assurance vieillesse déplafonnée:" + assuranceVieilleDepla);
+		System.out.println("Assurance vieillesse plafonnée:" + assuranceVieilllePla);
+		System.out.println("Frais professionnels:" + fraisPro);
+		System.out.println("Contribution sociale généralisée:" + contriSocialeGene);
+		System.out.println("CRDS:" + crds);
+		System.out.println("Chômage:" + chomage);
+		
+		
+		/* On affiche le salaire net  et total prélèvements */ 
+		double prelevements = assuranceMaladie + assuranceVieilleDepla + assuranceVieilllePla + fraisPro + contriSocialeGene + crds + chomage;
+		double salaireNet = salaireUser - prelevements;
+		
+		System.out.println("Prélèvement:" + prelevements);
+		System.out.println("Salaire net:" + salaireNet);
+	}		
+}
 
 
 ```
 _Exemple d'exécution_
 ```
+Rentrer votre salaire brut: 2000
+Voici votre fiche de paie
+Salaire brut:2000.0
+Assurance maladie:15.0
+Assurance vieillesse déplafonnée:2.0
+Assurance vieillesse plafonnée:135.0
+Frais professionnels:35.0
+Contribution sociale généralisée:147.375
+CRDS:9.825000000000001
+Chômage:48.0
+Prélèvement:392.2
+Salaire net:1607.8
+
+
+------------------
+(program exited with code: 0)
 
 ```
 ## Exercice 6
