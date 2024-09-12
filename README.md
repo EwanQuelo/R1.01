@@ -38,6 +38,7 @@ _Code :_
 ```java
 /*
 * @author Ewan QUELO
+* Compare 3 valeurs et trouve celui qui est le plus grand
 */
 
 class Syntaxe{
@@ -76,10 +77,34 @@ Appuyez sur une touche pour continuer...
 ## Exercice 3
 _Code :_
 ```java
+/*
+* @author Ewan QUELO
+* Permet le calcul de l'aire et du périmètre à partir du rayon fourni
+*/
+
+class Cercle{
+	void principal(){
+		double rayon; 
+		double perimetre;
+		double aire;
+		
+		rayon = SimpleInput.getDouble("Rayon de votre cercle :");
+		
+		
+		}
+}
 
 
 ```
-_Exemple d'exécution_
+_Exemple d'exécution 1_
+```
+
+```
+_Exemple d'exécution 2_
+```
+
+```
+_Exemple d'exécution 3_
 ```
 
 ```
