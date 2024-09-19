@@ -341,3 +341,101 @@ Le nombre saisi est inférieur au précédent
 (program exited with code: 0)
 
 ```
+
+## Exercice 4
+```
+/**
+ * En fonction du prix et du montant donné dans la machine 
+ * on calcule le nombres de chaque pièces et billets rendus
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo4 {
+	
+	void principal() {
+		int prix = SimpleInput.getInt("Quel est le prix du produit: ");
+		int montantTotalInsere = 0;
+        
+        while (montantTotalInsere < prix) {
+            int montantInsere = SimpleInput.getInt("Combien vous donnez: ");
+            montantTotalInsere += montantInsere;
+            
+            if (montantTotalInsere < prix) {
+                System.out.println("Voleur, il manque " + (prix - montantTotalInsere) + "€");
+            }
+		}
+		
+		if (montantTotalInsere == prix ) {
+			System.out.println("Pas de rendue de monnaie");
+		}
+		
+		if (montantTotalInsere > prix) {
+			
+			int diffPrix = montantTotalInsere - prix;
+			
+			if (diffPrix >= 50) {
+            int billet50 = diffPrix / 50;
+            diffPrix %= 50;
+            System.out.println(billet50 + " billet(s) de 50€");
+			}
+			
+			if (diffPrix >= 20) {
+            int billet20 = diffPrix / 20;
+            diffPrix %= 20;
+            System.out.println(billet20 + " billet(s) de 20€");   
+			}
+			
+			if (diffPrix >= 10) {
+            int billet10 = diffPrix / 10;
+            diffPrix %= 10;
+            System.out.println(billet10 + " billet(s) de 10€");
+			}
+			
+			if (diffPrix >= 5) {
+            int billet5 = diffPrix / 5;
+            diffPrix %= 5;
+            System.out.println(billet5 + " billet(s) de 5€");
+			}
+			
+			if (diffPrix >= 2) {
+            int piece2 = diffPrix / 2;
+            diffPrix %= 2;
+            System.out.println(piece2 + " pièce(s) de 2€");
+			}
+			
+			if (diffPrix >= 1) {
+            int piece1 = diffPrix / 1;
+            diffPrix %= 1;
+            System.out.println(piece1 + " pièce(s) de 1€");
+			}
+		}
+     }
+     
+}
+```
+
+_Exemple d'exécution 1_
+```
+Quel est le prix du produit: 15
+Combien vous donnez: 320
+6 billet(s) de 50€
+1 billet(s) de 5€
+
+
+------------------
+(program exited with code: 0)
+```
+
+_Exemple d'exécution 2_
+```
+Quel est le prix du produit: 14
+Combien vous donnez: 0
+Voleur, il manque 14€
+Combien vous donnez: 14
+Pas de rendue de monnaie
+
+
+------------------
+(program exited with code: 0)
+```
