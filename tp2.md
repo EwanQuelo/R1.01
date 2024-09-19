@@ -212,7 +212,7 @@ class Exo2 {
 			}
 		}
         System.out.println("Le résultat est : " + val1);
-     }
+     	}
 }
 
 ```
@@ -270,7 +270,7 @@ class Exo2 {
 			}
 		}
         System.out.println("Le résultat est : " + val1);
-     }
+     	}
 }
 
 ```
@@ -311,7 +311,7 @@ class Exo3 {
 		
 		
 		System.out.println("Le nombre saisi est inférieur au précédent");
-     }
+     	}
 }
 
 
@@ -352,7 +352,6 @@ Le nombre saisi est inférieur au précédent
 
 
 class Exo4 {
-	
 	void principal() {
 		int prix = SimpleInput.getInt("Quel est le prix du produit: ");
 		int montantTotalInsere = 0;
@@ -410,8 +409,7 @@ class Exo4 {
             System.out.println(piece1 + " pièce(s) de 1€");
 			}
 		}
-     }
-     
+    }
 }
 ```
 
@@ -438,4 +436,78 @@ Pas de rendue de monnaie
 
 ------------------
 (program exited with code: 0)
+```
+## Exercice 5
+```
+/**
+ * L'ordinateur choisi un nb aléatoire entre 1 et 100
+ * et l'utilisateur doit le trouver
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo5 {
+	
+	void principal() {
+		int nbRandom = (int) (Math.random() * 100);
+		int nbPick = 101;
+		int essais = 0;
+		
+		do {
+			essais++;
+			nbPick = SimpleInput.getInt("Quel nb: ");
+			
+			if(nbPick > nbRandom){
+				System.out.println("Trop grand !");
+			} else if (nbPick < nbRandom) {
+				System.out.println("Trop petit !");
+			}
+		} while (nbPick != nbRandom);
+		System.out.println("Bravo ! Le nombre correct était bien " + nbRandom);
+		System.out.println("Vous avez trouvé en " + essais + " essai(s)");	
+     }
+}
+```
+
+_Exemple d'exécution 1_
+```
+Quel nb: 40
+Trop grand !
+Quel nb: 30
+Trop grand !
+Quel nb: 20
+Trop petit !
+Quel nb: 25
+Trop grand !
+Quel nb: 23
+Trop petit !
+Quel nb: 24 
+Bravo ! Le nombre correct était bien 24
+Vous avez trouvé en 8 essai(s)
+
+
+------------------
+(program exited with code: 0)
+```
+
+_Exemple d'exécution 2_
+```
+Quel nb: 30
+Trop petit !
+Quel nb: 50
+Trop grand !
+Quel nb: 40
+Trop grand !
+Quel nb: 35
+Trop grand !
+Quel nb: 33
+Trop petit !
+Quel nb: 34
+Bravo ! Le nombre correct était bien 34
+Vous avez trouvé en 6 essai(s)
+
+
+------------------
+(program exited with code: 0)
+
 ```
