@@ -78,7 +78,7 @@ Votre nb: -1
 ```
 
 ### Partie 2:
-_Code version "while" :_
+_Code version "while" modifié avec la moyenne :_
 ```java
 /**
  * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
@@ -87,28 +87,45 @@ _Code version "while" :_
 
 class Exo1 {
 	void principal() {
-		int nb = 1;
-		while(nb != -1) {
+		int nb = 0;
+		int compteur = 0 ;
+		int total = 0;
+		do {
 			nb = SimpleInput.getInt("Votre nb: ");
 			if (nb != -1) {
 				System.out.println(nb);
+				total += nb;
+				compteur ++;
 			}
+		} while (nb != -1);
+		
+		if (compteur != 0) {
+			System.out.println("Voici la moyenne des nombres saisis: " + (total / compteur));
 		}
 	}
 }
+```
+_Exemple d'exécution 1_
+```
+Votre nb: 3
+3
+Votre nb: 3
+3
+Votre nb: 3
+3
+Votre nb: -1
+Voici la moyenne des nombres saisis: 3
 
+
+------------------
+(program exited with code: 0)
 ```
-_Exemple d'exécution_
+_Exemple d'exécution 2_
 ```
-Votre nb: 1
-1
-Votre nb: 2
-2
 Votre nb: -1
 
 
 ------------------
 (program exited with code: 0)
-
 ```
 
