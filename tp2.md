@@ -136,7 +136,7 @@ Votre nb: -1
 _Rôle du programme :_
 Calcule le pgcd des 2 valeurs saisis par l'utilisateur. 
 
-_Exemple d'exécution qui se terminent_
+_Exemple d'exécution qui se terminent 1_
 ```
 Première valeur : 10
 Deuxième valeur : 5
@@ -146,7 +146,24 @@ Le résultat est : 5
 ------------------
 (program exited with code: 0)
 ```
-_Exemple d'exécution qui ne se terminent pas_
+_Exemple d'exécution qui se terminent 2_
+```
+Première valeur : 10
+Deuxième valeur : 5
+Le résultat est : 5
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution qui ne se terminent pas 1_
+```
+Première valeur : 0
+Deuxième valeur : 3
+
+
+```
+_Exemple d'exécution qui ne se terminent pas 2_
 ```
 Première valeur : 0
 Deuxième valeur : 3
