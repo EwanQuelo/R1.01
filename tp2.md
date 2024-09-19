@@ -134,7 +134,7 @@ Votre nb: -1
 ### Partie 1:
 
 _Rôle du programme :_
-Trouver le pgcd des 2 valeurs saisis par l'utilisateur
+Calcule le pgcd des 2 valeurs saisis par l'utilisateur. 
 
 _Exemple d'exécution qui se terminent_
 ```
@@ -148,13 +148,9 @@ Le résultat est : 5
 ```
 _Exemple d'exécution qui ne se terminent pas_
 ```
-Première valeur : -10
-Deuxième valeur : 0
-Le résultat est : -2147483646
+Première valeur : 0
+Deuxième valeur : 3
 
-
-------------------
-(program exited with code: 0)
 
 ```
 
@@ -173,10 +169,14 @@ class Exo2 {
 		int val1 = 0;
 		int val2 = 0;
 		
-		while (val1 <= 0 || val2 <= 0) {
+		while (val1 <= 0) {
 			val1 = SimpleInput.getInt ("Première valeur : ");
+		}
+		
+		while (val2 <= 0) {
 			val2 = SimpleInput.getInt ("Deuxième valeur : ");
 		}
+		
 		
 		while (val1 != val2) {
 			if (val1 > val2) {
@@ -188,14 +188,25 @@ class Exo2 {
         System.out.println("Le résultat est : " + val1);
      }
 }
+
 ```
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
-Première valeur : 10
-Deuxième valeur : 0
-Première valeur : 4
-Deuxième valeur : 4
-Le résultat est : 4
+Première valeur : 1
+Deuxième valeur : 3
+Le résultat est : 1
+
+
+------------------
+(program exited with code: 0)
+
+```
+_Exemple d'exécution 2_
+```
+Première valeur : 0
+Première valeur : 3
+Deuxième valeur : 2
+Le résultat est : 1
 
 
 ------------------
@@ -216,10 +227,14 @@ class Exo2 {
 		int val1;
 		int val2;
 		
-		do  {
+		do {
 			val1 = SimpleInput.getInt ("Première valeur : ");
+		} while (val1 <= 0);
+		
+		do {
 			val2 = SimpleInput.getInt ("Deuxième valeur : ");
-		} while (val1 <= 0 || val2 <= 0);
+		} while (val2 <= 0);
+		
 		
 		while (val1 != val2) {
 			if (val1 > val2) {
@@ -235,10 +250,11 @@ class Exo2 {
 ```
 _Exemple d'exécution_
 ```
-Première valeur : 10
+Première valeur : 0
+Première valeur : 3
 Deuxième valeur : 0
-Première valeur : 5
-Deuxième valeur : 3
+Deuxième valeur : -4
+Deuxième valeur : 2
 Le résultat est : 1
 
 
