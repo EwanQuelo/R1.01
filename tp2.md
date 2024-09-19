@@ -511,3 +511,206 @@ Vous avez trouvé en 6 essai(s)
 (program exited with code: 0)
 
 ```
+
+## Exercice 6
+```java
+/**
+ * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous 
+ * a pas dit que c'était le bon résultat
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo6 {
+	
+	void principal() {
+		int valMax = 1000;
+		int valMin = 0;
+		int choixOrdi;
+		String indication = "";
+		
+		
+		while (!indication.equals("=")) {
+			choixOrdi = valMin + (int)(Math.random() * ((valMax - valMin) + 1));
+			
+			System.out.println("Est ce que votre nombre est " + choixOrdi);
+			
+			do {
+			indication = SimpleInput.getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+			} while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
+			
+			if(indication.equals("=")) {
+			System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
+			} else if (indication.equals("+")) {
+				valMin = choixOrdi + 1;
+			} else if (indication.equals("-")){
+				valMax = choixOrdi - 1;
+			}
+			
+		
+		}
+	}
+}
+
+
+/**
+ * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous 
+ * a pas dit que c'était le bon résultat
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo6 {
+	
+	void principal() {
+		int valMax = 1000;
+		int valMin = 0;
+		int choixOrdi;
+		String indication = "";
+		
+		
+		while (!indication.equals("=")) {
+			choixOrdi = valMin + (int)(Math.random() * ((valMax - valMin) + 1));
+			
+			System.out.println("Est ce que votre nombre est " + choixOrdi);
+			
+			do {
+			indication = SimpleInput.getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+			} while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
+			
+			if(indication.equals("=")) {
+			System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
+			} else if (indication.equals("+")) {
+				valMin = choixOrdi + 1;
+			} else if (indication.equals("-")){
+				valMax = choixOrdi - 1;
+			}
+			
+		
+		}
+	}
+}
+```
+
+_Exemple d'exécution 1_
+```
+Est ce que votre nombre est 126
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 963
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 973
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 996
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 1000
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! =
+Yes j'ai trouvé votre nb était 1000
+
+
+------------------
+(program exited with code: 0)
+```
+
+_Exemple d'exécution 2_
+```
+Est ce que votre nombre est 976
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! -
+Est ce que votre nombre est 254
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 428
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! -
+Est ce que votre nombre est 418
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 421
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! -
+Est ce que votre nombre est 420
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! -
+Est ce que votre nombre est 419
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! -
+Est ce que votre nombre est 419
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! =
+Yes j'ai trouvé votre nb était 419
+
+
+------------------
+(program exited with code: 0)
+
+```
+
+## Exercice 6
+### Partie facultative
+
+```java
+/**
+ * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous 
+ * a pas dit que c'était le bon résultat
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo6 {
+	
+	void principal() {
+		int valMax = 1000;
+		int valMin = 0;
+		int choixOrdi;
+		String indication = "";
+		
+		
+		while (!indication.equals("=")) {
+			choixOrdi = valMin + (int)(Math.random() * ((valMax - valMin) + 1));
+			
+			System.out.println("Est ce que votre nombre est " + choixOrdi);
+			
+			do {
+			indication = SimpleInput.getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+			} while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
+			
+			if(indication.equals("=")) {
+			System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
+			} else if (indication.equals("+")) {
+				valMin = choixOrdi + 1;
+			} else if (indication.equals("-")){
+				valMax = choixOrdi - 1;
+			}
+			
+			if((valMax - valMin) == 0) {
+				choixOrdi++;
+				System.out.println("Votre nombre est forcément: " + choixOrdi);
+				indication = "=";
+			}
+		}
+	}
+}
+```
+
+_Exemple d'exécution_
+```
+Est ce que votre nombre est 671
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 754
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 844
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 860
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 920
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 934
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! -
+Est ce que votre nombre est 924
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 928
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 929
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 931
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Est ce que votre nombre est 932
+ + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! +
+Votre nombre est forcément: 933
+
+
+------------------
+(program exited with code: 0)
+```
