@@ -9,7 +9,7 @@
 _Code version "while" :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
+ * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est pas -1
  *  @author Ewan QUÉLO
  */
 
@@ -43,7 +43,7 @@ Votre nb: -1
 _Code version "do while" :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
+ * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est pas -1
  *  @author Ewan QUÉLO
  */
 
@@ -81,7 +81,7 @@ Votre nb: -1
 _Code version "while" modifié avec la moyenne :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1 ainsi que la moyenne
+ * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est pas -1, ainsi que la moyenne
  * des nb saisis si elle n'est pas divisé par 0 et sans prendre en compte -1
  *  @author Ewan QUÉLO
  */
@@ -134,33 +134,115 @@ Votre nb: -1
 ### Partie 1:
 
 _Rôle du programme :_
-Voici ma réponse ...
-
+Trouver le pgcd des 2 valeurs saisis par l'utilisateur
 
 _Exemple d'exécution qui se terminent_
 ```
-Execution
+Première valeur : 10
+Deuxième valeur : 5
+Le résultat est : 5
 
+
+------------------
+(program exited with code: 0)
 ```
 _Exemple d'exécution qui ne se terminent pas_
 ```
-Execution
+Première valeur : -10
+Deuxième valeur : 0
+Le résultat est : -2147483646
+
+
+------------------
+(program exited with code: 0)
 
 ```
 
 ### Partie 2:
-_Code :_
+_Code version "while" :_
 ```java
-CODE
+/**
+ * Trouver le pgcd des 2 valeurs saisis par l'utilisateur
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo2 {
+	
+	void principal() {
+		int val1 = 0;
+		int val2 = 0;
+		
+		while (val1 <= 0 || val2 <= 0) {
+			val1 = SimpleInput.getInt ("Première valeur : ");
+			val2 = SimpleInput.getInt ("Deuxième valeur : ");
+		}
+		
+		while (val1 != val2) {
+			if (val1 > val2) {
+				val1 = val1 - val2;
+			} else {
+				val2 = val2 - val1;
+			}
+		}
+        System.out.println("Le résultat est : " + val1);
+     }
+}
+```
+_Exemple d'exécution_
+```
+Première valeur : 10
+Deuxième valeur : 0
+Première valeur : 4
+Deuxième valeur : 4
+Le résultat est : 4
+
+
+------------------
+(program exited with code: 0)
+
+```
+_Code version "do while" :_
+```java
+/**
+ * Trouver le pgcd des 2 valeurs saisis par l'utilisateur
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo2 {
+	
+	void principal() {
+		int val1;
+		int val2;
+		
+		do  {
+			val1 = SimpleInput.getInt ("Première valeur : ");
+			val2 = SimpleInput.getInt ("Deuxième valeur : ");
+		} while (val1 <= 0 || val2 <= 0);
+		
+		while (val1 != val2) {
+			if (val1 > val2) {
+				val1 = val1 - val2;
+			} else {
+				val2 = val2 - val1;
+			}
+		}
+        System.out.println("Le résultat est : " + val1);
+     }
+}
 
 ```
 _Exemple d'exécution_
 ```
-Execution
+Première valeur : 10
+Deuxième valeur : 0
+Première valeur : 5
+Deuxième valeur : 3
+Le résultat est : 1
 
-```
-_Exemple d'exécution_
-```
-Execution
+
+------------------
+(program exited with code: 0)
 
 ```
