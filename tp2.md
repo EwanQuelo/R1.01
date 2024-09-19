@@ -90,7 +90,7 @@ class Exo1 {
 	void principal() {
 		int nb = 0;
 		int compteur = 0 ;
-		int total = 0;
+		double total = 0;
 		do {
 			nb = SimpleInput.getInt("Votre nb: ");
 			if (nb != -1) {
@@ -99,35 +99,44 @@ class Exo1 {
 				compteur ++;
 			}
 		} while (nb != -1);
-		
+		double moyenne = total / compteur;
 		if (compteur != 0) {
-			System.out.println("Voici la moyenne des nombres saisis: " + (total / compteur));
+			System.out.println("Voici la moyenne des nombres saisis: " + moyenne);
 		}
 	}
 }
 ```
 _Exemple d'exécution 1_
 ```
-Votre nb: 3
-3
-Votre nb: 3
-3
-Votre nb: 3
-3
+Votre nb: 15
+15
+Votre nb: 10
+10
 Votre nb: -1
-Voici la moyenne des nombres saisis: 3
+Voici la moyenne des nombres saisis: 12.5
 
 
 ------------------
 (program exited with code: 0)
+
 ```
 _Exemple d'exécution 2_
 ```
+Votre nb: 20
+20
+Votre nb: 18
+18
+Votre nb: 16
+16
+Votre nb: 15
+15
 Votre nb: -1
+Voici la moyenne des nombres saisis: 17.25
 
 
 ------------------
 (program exited with code: 0)
+
 ```
 
 ## Exercice 2
