@@ -1,1 +1,114 @@
+# R1.01 : TP2
+
+**Nom :** QUÉLO
+**Prénom :** Ewan
+**Groupe :** C2
+
+## Exercice 1 
+### Partie 1:
+_Code version "while" :_
+```java
+/**
+ * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
+ *  @author Ewan QUÉLO
+ */
+
+class Exo1 {
+	void principal() {
+		int nb = 1;
+		while(nb != -1) {
+			nb = SimpleInput.getInt("Votre nb: ");
+			if (nb != -1) {
+				System.out.println(nb);
+			}
+		}
+	}
+}
+
+```
+_Exemple d'exécution_
+```
+Votre nb: 1
+1
+Votre nb: 2
+2
+Votre nb: -1
+
+
+------------------
+(program exited with code: 0)
+
+```
+
+_Code version "do while" :_
+```java
+/**
+ * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
+ *  @author Ewan QUÉLO
+ */
+
+class Exo1 {
+	void principal() {
+		int nb;
+		do {
+			nb = SimpleInput.getInt("Votre nb: ");
+			if (nb != -1) {
+				System.out.println(nb);
+			}
+		} while (nb != -1);
+	}
+}
+
+```
+
+_Exemple d'exécution_
+```
+Votre nb: 10
+10
+Votre nb: 4
+4
+Votre nb: 3
+3
+Votre nb: -1
+
+
+------------------
+(program exited with code: 0)
+
+```
+
+### Partie 2:
+_Code version "while" :_
+```java
+/**
+ * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
+ *  @author Ewan QUÉLO
+ */
+
+class Exo1 {
+	void principal() {
+		int nb = 1;
+		while(nb != -1) {
+			nb = SimpleInput.getInt("Votre nb: ");
+			if (nb != -1) {
+				System.out.println(nb);
+			}
+		}
+	}
+}
+
+```
+_Exemple d'exécution_
+```
+Votre nb: 1
+1
+Votre nb: 2
+2
+Votre nb: -1
+
+
+------------------
+(program exited with code: 0)
+
+```
 
