@@ -289,7 +289,7 @@ Le résultat est : 1
 
 ```
 ## Exercice 3
-```
+```java
 /**
  * Tant que le nb saisi n'est pas inférieur au précédent l'utilisateur 
  * continue de saisir un nb 
@@ -343,7 +343,7 @@ Le nombre saisi est inférieur au précédent
 ```
 
 ## Exercice 4
-```
+```java
 /**
  * En fonction du prix et du montant donné dans la machine 
  * on calcule le nombres de chaque pièces et billets rendus
@@ -438,7 +438,7 @@ Pas de rendue de monnaie
 (program exited with code: 0)
 ```
 ## Exercice 5
-```
+```java
 /**
  * L'ordinateur choisi un nb aléatoire entre 1 et 100
  * et l'utilisateur doit le trouver
