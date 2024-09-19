@@ -148,13 +148,14 @@ Le résultat est : 5
 ```
 _Exemple d'exécution qui se terminent 2_
 ```
-Première valeur : 10
+Première valeur : 20
 Deuxième valeur : 5
 Le résultat est : 5
 
 
 ------------------
 (program exited with code: 0)
+
 ```
 _Exemple d'exécution qui ne se terminent pas 1_
 ```
@@ -165,9 +166,8 @@ Deuxième valeur : 3
 ```
 _Exemple d'exécution qui ne se terminent pas 2_
 ```
-Première valeur : 0
-Deuxième valeur : 3
-
+Première valeur : -5
+Deuxième valeur : 10
 
 ```
 
