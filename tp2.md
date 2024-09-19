@@ -279,3 +279,56 @@ Le résultat est : 1
 (program exited with code: 0)
 
 ```
+## Exercice 3
+```
+/**
+ * Tant que le nb saisi n'est pas inférieur au précédent l'utilisateur 
+ * continue de saisir un nb 
+ *  @author Ewan QUÉLO
+ */
+
+
+class Exo3 {
+	
+	void principal() {
+		int val1 = SimpleInput.getInt("Saissisez votre valeur: ");
+		int val2 = SimpleInput.getInt("Saissisez votre valeur: ");
+		
+		while (val2 >= val1) {
+			val1 = val2;
+			val2 = SimpleInput.getInt("Saissisez votre valeur: ");
+			
+		}
+		
+		
+		System.out.println("Le nombre saisi est inférieur au précédent");
+     }
+}
+
+
+```
+
+_Exemple d'exécution 1_
+```
+Saissisez votre valeur: 20
+Saissisez votre valeur: 22
+Saissisez votre valeur: 18
+Le nombre saisi est inférieur au précédent
+
+
+------------------
+(program exited with code: 0)
+
+```
+
+_Exemple d'exécution 2_
+```
+Saissisez votre valeur: 20
+Saissisez votre valeur: 10
+Le nombre saisi est inférieur au précédent
+
+
+------------------
+(program exited with code: 0)
+
+```
