@@ -81,7 +81,8 @@ Votre nb: -1
 _Code version "while" modifié avec la moyenne :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1
+ * Ce programme affiche les nombres que l'utilisateur saisi sauf quand c'est -1 ainsi que la moyenne
+ * des nb saisis si elle n'est pas divisé par 0 et sans prendre en compte -1
  *  @author Ewan QUÉLO
  */
 
@@ -129,3 +130,37 @@ Votre nb: -1
 (program exited with code: 0)
 ```
 
+## Exercice 2
+### Partie 1:
+
+_Rôle du programme :_
+Voici ma réponse ...
+
+
+_Exemple d'exécution qui se terminent_
+```
+Execution
+
+```
+_Exemple d'exécution qui ne se terminent pas_
+```
+Execution
+
+```
+
+### Partie 2:
+_Code :_
+```java
+CODE
+
+```
+_Exemple d'exécution_
+```
+Execution
+
+```
+_Exemple d'exécution_
+```
+Execution
+
+```
