@@ -17,6 +17,7 @@ _Code version "while" :_
 class Exo1 {
     void principal() {
         int nb = 1;
+	System.out.println("Pour sortir de la boucle rentrer -1");
         while (nb != -1) {
             nb = SimpleInput.getInt("Votre nb: ");
             if (nb != -1) {
@@ -52,6 +53,7 @@ _Code version "do while" :_
 class Exo1 {
     void principal() {
         int nb;
+	System.out.println("Pour sortir de la boucle rentrer -1");
         do {
             nb = SimpleInput.getInt("Votre nb: ");
             if (nb != -1) {
@@ -94,6 +96,7 @@ class Exo1 {
         int nb = 0;
         int compteur = 0;
         double total = 0;
+	System.out.println("Pour sortir de la boucle rentrer -1");
         do {
             nb = SimpleInput.getInt("Votre nb: ");
             if (nb != -1) {
