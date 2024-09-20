@@ -9,20 +9,21 @@
 _Code version "while" :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est pas -1
- *  @author Ewan QUÉLO
+ * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est
+ * pas -1
+ * @author Ewan QUÉLO
  */
 
 class Exo1 {
-	void principal() {
-		int nb = 1;
-		while(nb != -1) {
-			nb = SimpleInput.getInt("Votre nb: ");
-			if (nb != -1) {
-				System.out.println(nb);
-			}
-		}
-	}
+    void principal() {
+        int nb = 1;
+        while (nb != -1) {
+            nb = SimpleInput.getInt("Votre nb: ");
+            if (nb != -1) {
+                System.out.println(nb);
+            }
+        }
+    }
 }
 
 ```
@@ -43,22 +44,22 @@ Votre nb: -1
 _Code version "do while" :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est pas -1
- *  @author Ewan QUÉLO
+ * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est
+ * pas -1
+ * @author Ewan QUÉLO
  */
 
 class Exo1 {
-	void principal() {
-		int nb;
-		do {
-			nb = SimpleInput.getInt("Votre nb: ");
-			if (nb != -1) {
-				System.out.println(nb);
-			}
-		} while (nb != -1);
-	}
+    void principal() {
+        int nb;
+        do {
+            nb = SimpleInput.getInt("Votre nb: ");
+            if (nb != -1) {
+                System.out.println(nb);
+            }
+        } while (nb != -1);
+    }
 }
-
 ```
 
 _Exemple d'exécution_
@@ -81,29 +82,31 @@ Votre nb: -1
 _Code version "while" modifié avec la moyenne :_
 ```java
 /**
- * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est pas -1, ainsi que la moyenne
+ * Ce programme affiche les nombres que l'utilisateur saisi tant que ce n'est
+ * pas -1, ainsi que la moyenne
  * des nb saisis si elle n'est pas divisé par 0 et sans prendre en compte -1
- *  @author Ewan QUÉLO
+ * 
+ * @author Ewan QUÉLO
  */
 
 class Exo1 {
-	void principal() {
-		int nb = 0;
-		int compteur = 0 ;
-		double total = 0;
-		do {
-			nb = SimpleInput.getInt("Votre nb: ");
-			if (nb != -1) {
-				System.out.println(nb);
-				total += nb;
-				compteur ++;
-			}
-		} while (nb != -1);
-		double moyenne = total / compteur;
-		if (compteur != 0) {
-			System.out.println("Voici la moyenne des nombres saisis: " + moyenne);
-		}
-	}
+    void principal() {
+        int nb = 0;
+        int compteur = 0;
+        double total = 0;
+        do {
+            nb = SimpleInput.getInt("Votre nb: ");
+            if (nb != -1) {
+                System.out.println(nb);
+                total += nb;
+                compteur++;
+            }
+        } while (nb != -1);
+        double moyenne = total / compteur;
+        if (compteur != 0) {
+            System.out.println("Voici la moyenne des nombres saisis: " + moyenne);
+        }
+    }
 }
 ```
 _Exemple d'exécution 1_
@@ -185,36 +188,33 @@ _Code version "while" :_
 ```java
 /**
  * Trouver le pgcd des 2 valeurs saisis par l'utilisateur
- *  @author Ewan QUÉLO
+ * @author Ewan QUÉLO
  */
 
-
 class Exo2 {
-	
-	void principal() {
-		int val1 = 0;
-		int val2 = 0;
-		
-		while (val1 <= 0) {
-			val1 = SimpleInput.getInt ("Première valeur : ");
-		}
-		
-		while (val2 <= 0) {
-			val2 = SimpleInput.getInt ("Deuxième valeur : ");
-		}
-		
-		
-		while (val1 != val2) {
-			if (val1 > val2) {
-				val1 = val1 - val2;
-			} else {
-				val2 = val2 - val1;
-			}
-		}
-        System.out.println("Le résultat est : " + val1);
-     	}
-}
 
+    void principal() {
+        int val1 = 0;
+        int val2 = 0;
+
+        while (val1 <= 0) {
+            val1 = SimpleInput.getInt("Première valeur : ");
+        }
+
+        while (val2 <= 0) {
+            val2 = SimpleInput.getInt("Deuxième valeur : ");
+        }
+
+        while (val1 != val2) {
+            if (val1 > val2) {
+                val1 = val1 - val2;
+            } else {
+                val2 = val2 - val1;
+            }
+        }
+        System.out.println("Le résultat est : " + val1);
+    }
+}
 ```
 _Exemple d'exécution 1_
 ```
@@ -243,36 +243,34 @@ _Code version "do while" :_
 ```java
 /**
  * Trouver le pgcd des 2 valeurs saisis par l'utilisateur
- *  @author Ewan QUÉLO
+ * 
+ * @author Ewan QUÉLO
  */
 
-
 class Exo2 {
-	
-	void principal() {
-		int val1;
-		int val2;
-		
-		do {
-			val1 = SimpleInput.getInt ("Première valeur : ");
-		} while (val1 <= 0);
-		
-		do {
-			val2 = SimpleInput.getInt ("Deuxième valeur : ");
-		} while (val2 <= 0);
-		
-		
-		while (val1 != val2) {
-			if (val1 > val2) {
-				val1 = val1 - val2;
-			} else {
-				val2 = val2 - val1;
-			}
-		}
-        System.out.println("Le résultat est : " + val1);
-     	}
-}
 
+    void principal() {
+        int val1;
+        int val2;
+
+        do {
+            val1 = SimpleInput.getInt("Première valeur : ");
+        } while (val1 <= 0);
+
+        do {
+            val2 = SimpleInput.getInt("Deuxième valeur : ");
+        } while (val2 <= 0);
+
+        while (val1 != val2) {
+            if (val1 > val2) {
+                val1 = val1 - val2;
+            } else {
+                val2 = val2 - val1;
+            }
+        }
+        System.out.println("Le résultat est : " + val1);
+    }
+}
 ```
 _Exemple d'exécution_
 ```
@@ -291,30 +289,26 @@ Le résultat est : 1
 ## Exercice 3
 ```java
 /**
- * Tant que le nb saisi n'est pas inférieur au précédent l'utilisateur 
- * continue de saisir un nb 
- *  @author Ewan QUÉLO
+ * Tant que le nb saisi n'est pas inférieur au précédent l'utilisateur
+ * continue de saisir un nb
+ * 
+ * @author Ewan QUÉLO
  */
 
-
 class Exo3 {
-	
-	void principal() {
-		int val1 = SimpleInput.getInt("Saissisez votre valeur: ");
-		int val2 = SimpleInput.getInt("Saissisez votre valeur: ");
-		
-		while (val2 >= val1) {
-			val1 = val2;
-			val2 = SimpleInput.getInt("Saissisez votre valeur: ");
-			
-		}
-		
-		
-		System.out.println("Le nombre saisi est inférieur au précédent");
-     	}
+
+    void principal() {
+        int val1 = SimpleInput.getInt("Saissisez votre valeur: ");
+        int val2 = SimpleInput.getInt("Saissisez votre valeur: ");
+
+        while (val2 >= val1) {
+            val1 = val2;
+            val2 = SimpleInput.getInt("Saissisez votre valeur: ");
+
+        }
+        System.out.println("Le nombre saisi est inférieur au précédent");
+    }
 }
-
-
 ```
 
 _Exemple d'exécution 1_
@@ -345,72 +339,74 @@ Le nombre saisi est inférieur au précédent
 ## Exercice 4
 ```java
 /**
- * En fonction du prix et du montant donné dans la machine 
+ * En fonction du prix et du montant donné dans la machine
  * on calcule le nombres de chaque pièces et billets rendus
- *  @author Ewan QUÉLO
+ * 
+ * @author Ewan QUÉLO
  */
 
-
 class Exo4 {
-	void principal() {
-		int prix = SimpleInput.getInt("Quel est le prix du produit: ");
-		int montantTotalInsere = 0;
-        
+    void principal() {
+        int prix = SimpleInput.getInt("Quel est le prix du produit: ");
+        int montantTotalInsere = 0;
+
         while (montantTotalInsere < prix) {
             int montantInsere = SimpleInput.getInt("Combien vous donnez: ");
             montantTotalInsere += montantInsere;
-            
+
             if (montantTotalInsere < prix) {
                 System.out.println("Voleur, il manque " + (prix - montantTotalInsere) + "€");
             }
-		}
-		
-		if (montantTotalInsere == prix ) {
-			System.out.println("Pas de rendue de monnaie");
-		}
-		
-		if (montantTotalInsere > prix) {
-			
-			int diffPrix = montantTotalInsere - prix;
-			
-			if (diffPrix >= 50) {
-            int billet50 = diffPrix / 50;
-            diffPrix %= 50;
-            System.out.println(billet50 + " billet(s) de 50€");
-			}
-			
-			if (diffPrix >= 20) {
-            int billet20 = diffPrix / 20;
-            diffPrix %= 20;
-            System.out.println(billet20 + " billet(s) de 20€");   
-			}
-			
-			if (diffPrix >= 10) {
-            int billet10 = diffPrix / 10;
-            diffPrix %= 10;
-            System.out.println(billet10 + " billet(s) de 10€");
-			}
-			
-			if (diffPrix >= 5) {
-            int billet5 = diffPrix / 5;
-            diffPrix %= 5;
-            System.out.println(billet5 + " billet(s) de 5€");
-			}
-			
-			if (diffPrix >= 2) {
-            int piece2 = diffPrix / 2;
-            diffPrix %= 2;
-            System.out.println(piece2 + " pièce(s) de 2€");
-			}
-			
-			if (diffPrix >= 1) {
-            int piece1 = diffPrix / 1;
-            diffPrix %= 1;
-            System.out.println(piece1 + " pièce(s) de 1€");
-			}
-		}
+        }
+
+        if (montantTotalInsere == prix) {
+            System.out.println("Pas de rendue de monnaie");
+        }
+
+        if (montantTotalInsere > prix) {
+
+            int diffPrix = montantTotalInsere - prix;
+	
+			System.out.println("Rendu: ");
+            if (diffPrix >= 50) {
+                int billet50 = diffPrix / 50;
+                diffPrix %= 50;
+                System.out.println(billet50 + " billet(s) de 50€");
+            }
+
+            if (diffPrix >= 20) {
+                int billet20 = diffPrix / 20;
+                diffPrix %= 20;
+                System.out.println(billet20 + " billet(s) de 20€");
+            }
+
+            if (diffPrix >= 10) {
+                int billet10 = diffPrix / 10;
+                diffPrix %= 10;
+                System.out.println(billet10 + " billet(s) de 10€");
+            }
+
+            if (diffPrix >= 5) {
+                int billet5 = diffPrix / 5;
+                diffPrix %= 5;
+                System.out.println(billet5 + " billet(s) de 5€");
+            }
+
+            if (diffPrix >= 2) {
+                int piece2 = diffPrix / 2;
+                diffPrix %= 2;
+                System.out.println(piece2 + " pièce(s) de 2€");
+            }
+
+            if (diffPrix >= 1) {
+                int piece1 = diffPrix / 1;
+                diffPrix %= 1;
+                System.out.println(piece1 + " pièce(s) de 1€");
+            }
+        }
     }
 }
+
 ```
 
 _Exemple d'exécution 1_
@@ -442,30 +438,29 @@ Pas de rendue de monnaie
 /**
  * L'ordinateur choisi un nb aléatoire entre 1 et 100
  * et l'utilisateur doit le trouver
- *  @author Ewan QUÉLO
+ * @author Ewan QUÉLO
  */
 
-
 class Exo5 {
-	
-	void principal() {
-		int nbRandom = (int) (Math.random() * 100);
-		int nbPick = 101;
-		int essais = 0;
-		
-		do {
-			essais++;
-			nbPick = SimpleInput.getInt("Quel nb: ");
-			
-			if(nbPick > nbRandom){
-				System.out.println("Trop grand !");
-			} else if (nbPick < nbRandom) {
-				System.out.println("Trop petit !");
-			}
-		} while (nbPick != nbRandom);
-		System.out.println("Bravo ! Le nombre correct était bien " + nbRandom);
-		System.out.println("Vous avez trouvé en " + essais + " essai(s)");	
-     }
+
+    void principal() {
+        int nbRandom = (int) (Math.random() * 100);
+        int nbPick = 101;
+        int essais = 0;
+
+        do {
+            essais++;
+            nbPick = SimpleInput.getInt("Quel nb: ");
+
+            if (nbPick > nbRandom) {
+                System.out.println("Trop grand !");
+            } else if (nbPick < nbRandom) {
+                System.out.println("Trop petit !");
+            }
+        } while (nbPick != nbRandom);
+        System.out.println("Bravo ! Le nombre correct était bien " + nbRandom);
+        System.out.println("Vous avez trouvé en " + essais + " essai(s)");
+    }
 }
 ```
 
@@ -515,80 +510,39 @@ Vous avez trouvé en 6 essai(s)
 ## Exercice 6
 ```java
 /**
- * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous 
+ * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous
  * a pas dit que c'était le bon résultat
- *  @author Ewan QUÉLO
+ * @author Ewan QUÉLO
  */
 
-
 class Exo6 {
-	
-	void principal() {
-		int valMax = 1000;
-		int valMin = 0;
-		int choixOrdi;
-		String indication = "";
-		
-		
-		while (!indication.equals("=")) {
-			choixOrdi = valMin + (int)(Math.random() * ((valMax - valMin) + 1));
-			
-			System.out.println("Est ce que votre nombre est " + choixOrdi);
-			
-			do {
-			indication = SimpleInput.getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
-			} while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
-			
-			if(indication.equals("=")) {
-			System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
-			} else if (indication.equals("+")) {
-				valMin = choixOrdi + 1;
-			} else if (indication.equals("-")){
-				valMax = choixOrdi - 1;
-			}
-			
-		
-		}
-	}
-}
 
+    void principal() {
+        int valMax = 1000;
+        int valMin = 0;
+        int choixOrdi;
+        String indication = "";
 
-/**
- * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous 
- * a pas dit que c'était le bon résultat
- *  @author Ewan QUÉLO
- */
+        while (!indication.equals("=")) {
+            choixOrdi = valMin + (int) (Math.random() * ((valMax - valMin) + 1));
 
+            System.out.println("Est ce que votre nombre est " + choixOrdi);
 
-class Exo6 {
-	
-	void principal() {
-		int valMax = 1000;
-		int valMin = 0;
-		int choixOrdi;
-		String indication = "";
-		
-		
-		while (!indication.equals("=")) {
-			choixOrdi = valMin + (int)(Math.random() * ((valMax - valMin) + 1));
-			
-			System.out.println("Est ce que votre nombre est " + choixOrdi);
-			
-			do {
-			indication = SimpleInput.getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
-			} while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
-			
-			if(indication.equals("=")) {
-			System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
-			} else if (indication.equals("+")) {
-				valMin = choixOrdi + 1;
-			} else if (indication.equals("-")){
-				valMax = choixOrdi - 1;
-			}
-			
-		
-		}
-	}
+            do {
+                indication = SimpleInput
+                        .getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+            } while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
+
+            if (indication.equals("=")) {
+                System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
+            } else if (indication.equals("+")) {
+                valMin = choixOrdi + 1;
+            } else if (indication.equals("-")) {
+                valMax = choixOrdi - 1;
+            }
+
+        }
+    }
 }
 ```
 
@@ -642,45 +596,44 @@ Yes j'ai trouvé votre nb était 419
 
 ```java
 /**
- * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous 
+ * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous
  * a pas dit que c'était le bon résultat
- *  @author Ewan QUÉLO
+ * @author Ewan QUÉLO
  */
 
-
 class Exo6 {
-	
-	void principal() {
-		int valMax = 1000;
-		int valMin = 0;
-		int choixOrdi;
-		String indication = "";
-		
-		
-		while (!indication.equals("=")) {
-			choixOrdi = valMin + (int)(Math.random() * ((valMax - valMin) + 1));
-			
-			System.out.println("Est ce que votre nombre est " + choixOrdi);
-			
-			do {
-			indication = SimpleInput.getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
-			} while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
-			
-			if(indication.equals("=")) {
-			System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
-			} else if (indication.equals("+")) {
-				valMin = choixOrdi + 1;
-			} else if (indication.equals("-")){
-				valMax = choixOrdi - 1;
-			}
-			
-			if((valMax - valMin) == 0) {
-				choixOrdi++;
-				System.out.println("Votre nombre est forcément: " + choixOrdi);
-				indication = "=";
-			}
-		}
-	}
+
+    void principal() {
+        int valMax = 1000;
+        int valMin = 0;
+        int choixOrdi;
+        String indication = "";
+
+        while (!indication.equals("=")) {
+            choixOrdi = valMin + (int) (Math.random() * ((valMax - valMin) + 1));
+
+            System.out.println("Est ce que votre nombre est " + choixOrdi);
+
+            do {
+                indication = SimpleInput
+                        .getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+            } while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
+
+            if (indication.equals("=")) {
+                System.out.println("Yes j'ai trouvé votre nb était " + choixOrdi);
+            } else if (indication.equals("+")) {
+                valMin = choixOrdi + 1;
+            } else if (indication.equals("-")) {
+                valMax = choixOrdi - 1;
+            }
+
+            if ((valMax - valMin) == 0) {
+                choixOrdi++;
+                System.out.println("Votre nombre est forcément: " + choixOrdi);
+                indication = "=";
+            }
+        }
+    }
 }
 ```
 
