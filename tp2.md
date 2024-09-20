@@ -445,7 +445,7 @@ class Exo5 {
 
     void principal() {
         int nbRandom = (int) (Math.random() * 100);
-        int nbPick = 101;
+        int nbPick;
         int essais = 0;
 
         do {
