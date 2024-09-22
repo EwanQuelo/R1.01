@@ -450,6 +450,7 @@ class Exo5 {
         int nbRandom = (int) (Math.random() * 100);
         int nbPick;
         int essais = 0;
+	System.out.println("Essayez de deviner le nombre que je choisis !");
 
         do {
             essais++;
@@ -515,6 +516,7 @@ Vous avez trouvé en 6 essai(s)
 /**
  * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous
  * a pas dit que c'était le bon résultat
+ * 
  * @author Ewan QUÉLO
  */
 
@@ -525,15 +527,18 @@ class Exo6 {
         int valMin = 0;
         int choixOrdi;
         String indication = "";
+        int essais = 0;
+        System.out.println("Je vais essayer de deviner votre nombre compris 0 et 1000");
+        System.out.println("---------------------------------------------------------");
 
         while (!indication.equals("=")) {
             choixOrdi = valMin + (int) (Math.random() * ((valMax - valMin) + 1));
 
-            System.out.println("Est ce que votre nombre est " + choixOrdi);
+            System.out.println("Est ce que votre nombre est " + choixOrdi + " ?");
 
             do {
                 indication = SimpleInput
-                        .getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+                        .getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon");
             } while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
 
             if (indication.equals("=")) {
@@ -543,8 +548,9 @@ class Exo6 {
             } else if (indication.equals("-")) {
                 valMax = choixOrdi - 1;
             }
-
+            essais++;
         }
+        System.out.println("J'ai trouvé en " + essais + " essai(s)");
     }
 }
 ```
@@ -601,6 +607,7 @@ Yes j'ai trouvé votre nb était 419
 /**
  * On devine le nombre de l'utilisateur avec ses indication tant qu'il nous
  * a pas dit que c'était le bon résultat
+ * 
  * @author Ewan QUÉLO
  */
 
@@ -611,15 +618,18 @@ class Exo6 {
         int valMin = 0;
         int choixOrdi;
         String indication = "";
+        int essais = 0;
+        System.out.println("Je vais essayer de deviner votre nombre compris 0 et 1000");
+        System.out.println("---------------------------------------------------------");
 
         while (!indication.equals("=")) {
             choixOrdi = valMin + (int) (Math.random() * ((valMax - valMin) + 1));
 
-            System.out.println("Est ce que votre nombre est " + choixOrdi);
+            System.out.println("Est ce que votre nombre est " + choixOrdi + " ?");
 
             do {
                 indication = SimpleInput
-                        .getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon ! ");
+                        .getString(" + si le nb est plus grand; - si le nb est plus petit; = si le nb est le bon");
             } while (!indication.equals("=") && !indication.equals("+") && !indication.equals("-"));
 
             if (indication.equals("=")) {
@@ -635,7 +645,9 @@ class Exo6 {
                 System.out.println("Votre nombre est forcément: " + choixOrdi);
                 indication = "=";
             }
+            essais++;
         }
+        System.out.println("J'ai trouvé en " + essais + " essai(s)");
     }
 }
 ```
