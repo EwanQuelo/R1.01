@@ -20,7 +20,7 @@ class Exo1 {
         int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
 
         // AVANT
-        System.out.print("Avant\t : ");
+        System.out.print("Avant décallage\t : ");
         displayTab(t);
 
         // DECALLAGE :
@@ -34,7 +34,7 @@ class Exo1 {
         t[0] = derniereVal;
 
         // APRES
-        System.out.print("Apres\t : ");
+        System.out.print("Apres décallage\t : ");
         displayTab(t);
     }
 
@@ -52,8 +52,8 @@ class Exo1 {
 
 _Exemple d'exécution 1_
 ```
-Avant	 : {5,7,0,6,10,8,4,1,35,25,8,3}
-Apres	 : {3,5,7,0,6,10,8,4,1,35,25,8}
+Avant décallage	 : {5,7,0,6,10,8,4,1,35,25,8,3}
+Apres décallage	 : {3,5,7,0,6,10,8,4,1,35,25,8}
 
 
 ------------------
@@ -61,8 +61,8 @@ Apres	 : {3,5,7,0,6,10,8,4,1,35,25,8}
 ```
 _Exemple d'exécution 2_
 ```
-Avant	 : {5,6,9,10,28,0,0,4}
-Apres	 : {4,5,6,9,10,28,0,0}
+Avant décallage	 : {5,6,9,10,28,0,0,4}
+Apres décallage	 : {4,5,6,9,10,28,0,0}
 
 
 ------------------
@@ -175,7 +175,7 @@ class Exo2 {
 
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
 NORMAL	 : {5,7,0,6,10,8,4,1,35,25,8,3}
 CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
@@ -183,6 +183,16 @@ CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
 
 ------------------
 (program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+NORMAL	 : {1,2,3,4,5,6,7,8,9,10}
+CUMUL	 : {1,3,6,10,15,21,28,36,45,55}
+
+
+------------------
+(program exited with code: 0)
+
 ```
 
 ### Version "for"
