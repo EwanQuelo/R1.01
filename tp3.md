@@ -108,10 +108,19 @@ class Exo1 {
 }
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
 Avant	 : {5,7,0,6,10,8,4,1,35,25,8,3}
 Apres	 : {3,5,7,0,6,10,8,4,1,35,25,8}
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+Avant	 : {5,6,9,10,28,0,0,4}
+Apres	 : {4,5,6,9,10,28,0,0}
 
 
 ------------------
