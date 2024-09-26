@@ -264,24 +264,201 @@ La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
 
 _Code avec boucle "while" :_
 ```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo3 {
+    void principal() {
+        // int[] t = { 4, 3, 2, 1 }; // 5
+         int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35}; // REP 4
+        // int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 }; // REP 4
+        // int[] t = { 5 }; //1
+
+        int actuelleSerie = 1;  
+        int recordSerie = 1; 
+        int i = 0; 
+        boolean continuation = true;
+
+ 
+        while (i < t.length - 1 && continuation ) {
+            if (t[i + 1] > t[i]) {
+                actuelleSerie++;
+            } else {
+                actuelleSerie = 1; 
+                 if ((t.length - i) <= recordSerie) {
+                continuation = false;
+				}
+                
+            }
+
+            if (actuelleSerie > recordSerie) {
+                recordSerie = actuelleSerie;
+            }
+            i++; 
+           
+		}
+		displayTab(t);
+		System.out.println("Plus grande série de nb: " + recordSerie);	
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
 
 ```
 
 _Exemple d'exécution 1_
 ```
+{5,7,0,6,10,8,9,10,35}
+Plus grande série de nb: 4
 
+
+------------------
+(program exited with code: 0)
 ```
 _Exemple d'exécution 2_
 ```
+{4,3,2,1}
+Plus grande série de nb: 1
 
+
+------------------
+(program exited with code: 0)
 ```
 _Exemple d'exécution 3_
 ```
+{5,7,0,6,10,8,9,10,35,0}
+Plus grande série de nb: 4
+
+
+------------------
+(program exited with code: 0)
+
+```
+
+_Exemple d'exécution_
+```
+{5}
+Plus grande série de nb: 1
+
+
+------------------
+(program exited with code: 0)
 
 ```
 
 ## Exercice 4
-_Code avec boucle "for" :_
+_Code :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo4 {
+    void principal() {
+        // int[] t = { 4, 3, 2, 1 }; // 5
+        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35}; // REP 4
+        // int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 }; // REP 4
+        // int[] t = { 5 }; //1
+
+        int actuelleSerie = 1;  
+        int recordSerie = 1; 
+        int i = 0; 
+        boolean continuation = true;
+        
+        int indiceDebut = 0;
+		int indiceFin = 0;
+        int indiceActuelle = 0;
+ 
+        while (i < t.length - 1 && continuation ) {
+            if (t[i + 1] > t[i]) {
+                actuelleSerie++;
+            } else {
+                actuelleSerie = 1; 
+                indiceActuelle = i + 1;
+                
+                if ((t.length - i) <= recordSerie) {
+                continuation = false;
+				}
+			}
+
+            if (actuelleSerie > recordSerie) {
+                recordSerie = actuelleSerie;
+                indiceDebut = indiceActuelle; 
+                indiceFin = i + 1;         
+            }
+            i++; 
+           
+		}
+		displayTab(t);
+		System.out.println("Plus grande série de nb: " + recordSerie);	
+		System.out.println("La série commence à l'indice: " + indiceDebut + " et termine: " + indiceFin);
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
+```
+
+_Exemple d'exécution 1_
+```
+{5,7,0,6,10,8,9,10,35}
+Plus grande série de nb: 4
+La série commence à l'indice: 5 et termine: 8
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+{4,3,2,1}
+Plus grande série de nb: 1
+La série commence à l'indice: 0 et termine: 0
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 3_
+```
+{5}
+Plus grande série de nb: 1
+La série commence à l'indice: 0 et termine: 0
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 4_
+```
+{5,7,0,6,10,8,9,10,35,0}
+Plus grande série de nb: 4
+La série commence à l'indice: 5 et termine: 8
+
+
+------------------
+(program exited with code: 0)
+```
+## Exercice 5
+_Code :_
 ```java
 
 ```
@@ -290,3 +467,4 @@ _Exemple d'exécution_
 ```
 
 ```
+
