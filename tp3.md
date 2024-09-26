@@ -127,22 +127,6 @@ Apres	 : {4,5,6,9,10,28,0,0}
 (program exited with code: 0)
 ```
 
-## Exercice 2
-_Code :_
-```java
-METTRE LE CODE ICI
-```
-
-_Exemple d'exécution_
-```
-3
-
-------------------
-(program exited with code: 0)
-
-Appuyez sur une touche pour continuer...
-```
-
 ## Exercice 2 
 ### Version "while"
 _Code :_
