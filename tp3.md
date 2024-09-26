@@ -457,7 +457,147 @@ La série commence à l'indice: 5 et termine: 8
 ------------------
 (program exited with code: 0)
 ```
+
 ## Exercice 5
+_Code :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo5 {
+    void principal() {
+        int[] t = new int[10];  
+        for (int i = 0; i < 1000; i++) {
+            int nbRandom = (int)(Math.random() * 10);  
+            t[nbRandom]++;               
+        }
+		displayTab(t);
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
+```
+
+_Exemple d'exécution 1_
+```
+{88,88,94,102,106,103,104,107,102,106}
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+{92,105,117,96,109,93,87,98,97,106}
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 3_
+```
+{95,88,110,97,110,110,94,88,97,111}
+
+
+------------------
+(program exited with code: 0)
+```
+
+## Exercice 6
+_Code :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo6 {
+    void principal() {
+		int nbChoisi =0;
+		
+        do {
+			nbChoisi = SimpleInput.getInt("Donnez un nombre strictement positif: ");
+		} while(nbChoisi < 1);
+        
+        int nbEtape = 0;
+        int nbMaxRencontre = 0;
+        
+        while (nbChoisi != 1) {
+            if (nbChoisi % 2 == 0) {
+                nbChoisi = nbChoisi / 2;
+            } 
+            else {
+                nbChoisi = (nbChoisi * 3) + 1;
+            }
+
+            if (nbChoisi > nbMaxRencontre) {
+                nbMaxRencontre = nbChoisi;
+            }
+
+            nbEtape++;
+        }
+        
+        System.out.println("Nb étapes pour arriver à 1 : " + nbEtape);
+        System.out.println( "Nb max rencontré : " + nbMaxRencontre);
+		
+    }
+}
+```
+
+_Exemple d'exécution 1_
+```
+Donnez un nombre strictement positif: 7
+Nb étapes pour arriver à 1 : 16
+Nb max rencontré : 52
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+Donnez un nombre strictement positif: 2
+Nb étapes pour arriver à 1 : 1
+Nb max rencontré : 1
+
+
+------------------
+(program exited with code: 0)
+
+```
+_Exemple d'exécution 3_
+```
+Donnez un nombre strictement positif: 27
+Nb étapes pour arriver à 1 : 111
+Nb max rencontré : 9232
+
+
+------------------
+(program exited with code: 0)
+```
+
+## Exercice 7
+_Code :_
+```java
+
+```
+
+_Exemple d'exécution_
+```
+
+```
+
+## Exercice 8
 _Code :_
 ```java
 
