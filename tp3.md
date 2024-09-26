@@ -289,8 +289,8 @@ record: 3
 (program exited with code: 0)
 
 ```
-
-_Code qui s'arrête quand ce n'est plus possible d'avancera :_
+### S'arrête quand ce n'est plus possible d'avancer:
+_Code :_
 ```java
 /**
  * ROLE
@@ -304,7 +304,7 @@ class Exo3 {
 		int maxSerie = 0; 
 		int recordSerie = 0;
 		
-        for(int i = 0; i < t.length - 1; i++ ) {
+        for(int i = 0; i < t.length - 1 && recordSerie < (t.length - i); i++ ) {
 			
 			if (t[i + 1] > t[i]) {
 				maxSerie++;
@@ -314,7 +314,7 @@ class Exo3 {
 			
 			if(maxSerie > recordSerie ) {
 				recordSerie = maxSerie;
-			}	
+			}
 		}
 		
 		displayTab(t);
@@ -332,6 +332,7 @@ class Exo3 {
         System.out.println(t[i] + "}");
     }
 }
+
 ```
 
 _Exemple d'exécution_
@@ -345,3 +346,13 @@ record: 3
 
 ```
 
+## Exercice 4
+_Code avec boucle "for" :_
+```java
+
+```
+
+_Exemple d'exécution_
+```
+
+```
