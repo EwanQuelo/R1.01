@@ -125,3 +125,123 @@ _Exemple d'exécution_
 
 Appuyez sur une touche pour continuer...
 ```
+
+## Exercice 2 
+### Version "while"
+_Code :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo2 {
+    void principal() {
+        int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
+
+        // AVANT
+        System.out.print("NORMAL\t : ");
+        displayTab(t);
+
+        // CODE :
+		int[] cumul = new int[t.length];
+		int i = 0;
+		int total = 0;
+		
+		while(i< t.length) {
+			total += t[i];
+			cumul[i] = total;
+			i++;
+		}
+       
+        // APRES
+        System.out.print("CUMUL\t : ");
+        displayTab(cumul);
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
+
+```
+
+_Exemple d'exécution_
+```
+NORMAL	 : {5,7,0,6,10,8,4,1,35,25,8,3}
+CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
+
+
+------------------
+(program exited with code: 0)
+```
+
+### Version "for"
+_Code :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo2 {
+    void principal() {
+        int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
+
+        // AVANT
+        System.out.print("NORMAL\t : ");
+        displayTab(t);
+
+        // CODE :
+		int[] cumul = new int[t.length];
+		int total = 0;
+		
+		for(int i = 0; i < t.length; i++) {
+			total += t[i];
+			cumul[i] = total;
+		}
+       
+        // APRES
+        System.out.print("CUMUL\t : ");
+        displayTab(cumul);
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
+```
+
+_Exemple d'exécution_
+```
+NORMAL	 : {5,7,0,6,10,8,4,1,35,25,8,3}
+CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
+
+
+------------------
+(program exited with code: 0)
+```
+
+## Exercice 2
+_Code :_
+```java
+
+```
+
+_Exemple d'exécution_
+```
+
+```
+
