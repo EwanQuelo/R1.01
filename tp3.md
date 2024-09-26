@@ -237,7 +237,7 @@ class Exo2 {
 }
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
 NORMAL	 : {5,7,0,6,10,8,4,1,35,25,8,3}
 CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
@@ -245,6 +245,17 @@ CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
 
 ------------------
 (program exited with code: 0)
+```
+
+_Exemple d'exécution 2_
+```
+NORMAL	 : {1,2,3,4,5,6,7,8,9,10}
+CUMUL	 : {1,3,6,10,15,21,28,36,45,55}
+
+
+------------------
+(program exited with code: 0)
+
 ```
 
 ## Exercice 3
