@@ -234,14 +234,114 @@ CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
 (program exited with code: 0)
 ```
 
-## Exercice 2
-_Code :_
+## Exercice 3
+_Code avec boucle "for" :_
 ```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
 
+class Exo3 {
+    void principal() {
+        int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
+
+		int maxSerie = 0; 
+		int recordSerie = 0;
+		
+        for(int i = 0; i < t.length - 1; i++ ) {
+			
+			if (t[i + 1] > t[i]) {
+				maxSerie++;
+			} else {
+				maxSerie = 1;
+			}
+			
+			if(maxSerie > recordSerie ) {
+				recordSerie = maxSerie;
+			}	
+		}
+		
+		displayTab(t);
+		System.out.println("record: " + recordSerie);	
+		
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
 ```
 
 _Exemple d'exécution_
 ```
+{5,7,0,6,10,8,4,1,35,25,8,3}
+record: 3
+
+
+------------------
+(program exited with code: 0)
+
+```
+
+_Code qui s'arrête quand ce n'est plus possible d'avancera :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo3 {
+    void principal() {
+        int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
+
+		int maxSerie = 0; 
+		int recordSerie = 0;
+		
+        for(int i = 0; i < t.length - 1; i++ ) {
+			
+			if (t[i + 1] > t[i]) {
+				maxSerie++;
+			} else {
+				maxSerie = 1;
+			}
+			
+			if(maxSerie > recordSerie ) {
+				recordSerie = maxSerie;
+			}	
+		}
+		
+		displayTab(t);
+		System.out.println("record: " + recordSerie);	
+		
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
+```
+
+_Exemple d'exécution_
+```
+{5,7,0,6,10,8,4,1,35,25,8,3}
+record: 3
+
+
+------------------
+(program exited with code: 0)
 
 ```
 
