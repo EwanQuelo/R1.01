@@ -1,4 +1,4 @@
-# R1.01 : TP3
+ # R1.01 : TP3
 
 **Nom :** QUÉLO
 **Prénom :** Ewan
@@ -48,7 +48,7 @@ class Exo1 {
 }
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
 Avant	 : {5,7,0,6,10,8,4,1,35,25,8,3}
 Apres	 : {3,5,7,0,6,10,8,4,1,35,25,8}
@@ -57,7 +57,15 @@ Apres	 : {3,5,7,0,6,10,8,4,1,35,25,8}
 ------------------
 (program exited with code: 0)
 ```
+_Exemple d'exécution 2_
+```
+Avant	 : {5,6,9,10,28,0,0,4}
+Apres	 : {4,5,6,9,10,28,0,0}
 
+
+------------------
+(program exited with code: 0)
+```
 ### Version "for"
 _Code :_
 ```java
@@ -235,114 +243,24 @@ CUMUL	 : {5,12,12,18,28,36,40,41,76,101,109,112}
 ```
 
 ## Exercice 3
-_Code avec boucle "for" :_
+_Boucle for ou boucle while :_
+La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
+
+_Code avec boucle "while" :_
 ```java
-/**
- * ROLE
- * @author Ewan QUÉLO
- */
-
-class Exo3 {
-    void principal() {
-        int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
-
-		int maxSerie = 0; 
-		int recordSerie = 0;
-		
-        for(int i = 0; i < t.length - 1; i++ ) {
-			
-			if (t[i + 1] > t[i]) {
-				maxSerie++;
-			} else {
-				maxSerie = 1;
-			}
-			
-			if(maxSerie > recordSerie ) {
-				recordSerie = maxSerie;
-			}	
-		}
-		
-		displayTab(t);
-		System.out.println("record: " + recordSerie);	
-		
-    }
-
-    void displayTab(int[] t) {
-        int i = 0;
-        System.out.print("{");
-        while (i < t.length - 1) {
-            System.out.print(t[i] + ",");
-            i = i + 1;
-        }
-        System.out.println(t[i] + "}");
-    }
-}
-```
-
-_Exemple d'exécution_
-```
-{5,7,0,6,10,8,4,1,35,25,8,3}
-record: 3
-
-
-------------------
-(program exited with code: 0)
-
-```
-### S'arrête quand ce n'est plus possible d'avancer:
-_Code :_
-```java
-/**
- * ROLE
- * @author Ewan QUÉLO
- */
-
-class Exo3 {
-    void principal() {
-        int[] t = { 5, 7, 0, 6, 10, 8, 4, 1, 35, 25, 8, 3 };
-
-		int maxSerie = 0; 
-		int recordSerie = 0;
-		
-        for(int i = 0; i < t.length - 1 && recordSerie < (t.length - i); i++ ) {
-			
-			if (t[i + 1] > t[i]) {
-				maxSerie++;
-			} else {
-				maxSerie = 1;
-			}
-			
-			if(maxSerie > recordSerie ) {
-				recordSerie = maxSerie;
-			}
-		}
-		
-		displayTab(t);
-		System.out.println("record: " + recordSerie);	
-		
-    }
-
-    void displayTab(int[] t) {
-        int i = 0;
-        System.out.print("{");
-        while (i < t.length - 1) {
-            System.out.print(t[i] + ",");
-            i = i + 1;
-        }
-        System.out.println(t[i] + "}");
-    }
-}
 
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
-{5,7,0,6,10,8,4,1,35,25,8,3}
-record: 3
 
+```
+_Exemple d'exécution 2_
+```
 
-------------------
-(program exited with code: 0)
+```
+_Exemple d'exécution 3_
+```
 
 ```
 
