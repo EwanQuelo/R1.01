@@ -2,7 +2,9 @@
 # R1.01 : TP1
 
 **Nom :** QUÉLO
+
 **Prénom :** Ewan
+
 **Groupe :** C2
 
 ## Exercice 1 
