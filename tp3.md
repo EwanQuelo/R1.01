@@ -589,14 +589,102 @@ Nb max rencontré : 9232
 ## Exercice 7
 _Code :_
 ```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
 
+class Exo7 {
+    void principal() {
+		int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 };
+		
+		System.out.println("Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t");
+		int nbA = SimpleInput.getInt("Votre nombre a: ");
+		int nbB = SimpleInput.getInt("Votre nombre b: ");
+	
+		boolean aAtteint = false;
+        boolean bAtteint = false;
+        
+        int i = 0;
+        while (i < t.length) {
+            if (!aAtteint && t[i] == nbA) {
+                aAtteint = true;
+            } 
+            else if (aAtteint && t[i] == nbB) {
+                bAtteint = true;
+            }
+            i++;
+        }
+        if (aAtteint && bAtteint) {
+            System.out.println( nbA + " et " + nbB + " sont présents dans cet ordre dans le tableau t suivant:");
+        } else {
+            System.out.println(nbA + " et " + nbB + " ne sont pas dans l'ordre dans le tableau t suivant:");
+        }
+		displayTab(t);
+    }
+    
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
+Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t
+Votre nombre a: 5
+Votre nombre b: 35
+5 et 35 sont présents dans cet ordre dans le tableau t suivant
+{5,7,0,6,10,8,9,10,35,0}
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t
+Votre nombre a: 0
+Votre nombre b: 7
+0 et 7 ne sont pas dans l'ordre dans le tableau t suivant:
+{5,7,0,6,10,8,9,10,35,0}
+
+
+------------------
+(program exited with code: 0)
 
 ```
+_Exemple d'exécution 3_
+```
+Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t
+Votre nombre a: 8
+Votre nombre b: 9
+8 et 9 sont présents dans cet ordre dans le tableau t suivant:
+{5,7,0,6,10,8,9,10,35,0}
 
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 4_
+```
+Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t
+Votre nombre a: 24
+Votre nombre b: 19
+24 et 19 ne sont pas dans l'ordre dans le tableau t suivant:
+{5,7,0,6,10,8,9,10,35,0}
+
+
+------------------
+(program exited with code: 0)
+
+```
 ## Exercice 8
 _Code :_
 ```java
