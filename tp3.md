@@ -265,42 +265,46 @@ La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
 _Code avec boucle "while" :_
 ```java
 /**
- * Recherche la plus grande série d'entiers strictement croissants dans un
- * tableau
+ * ROLE
  * @author Ewan QUÉLO
  */
 
 class Exo3 {
     void principal() {
         // int[] t = { 4, 3, 2, 1 }; // 5
-        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35 }; // REP 4
+        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35}; // REP 4
         // int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 }; // REP 4
         // int[] t = { 5 }; //1
+        // int[] t = {1, 2, 3, 4, 0, 1, 2, 3, 4}; // REP 5
+        // int[] t = {4, 0, 5, 6, 10, 3, 4}; 
 
-        int actuelleSerie = 1;
-        int recordSerie = 1;
-        int i = 0;
+        int actuelleSerie = 1;  
+        int recordSerie = 1; 
+        int i = 0; 
         boolean continuation = true;
 
-        while (i < t.length - 1 && continuation) {
+ 
+        while (i < t.length - 1 && continuation ) {
             if (t[i + 1] > t[i]) {
                 actuelleSerie++;
             } else {
-                actuelleSerie = 1;
+                actuelleSerie = 1; 
                 if ((t.length - i) <= recordSerie) {
-                    continuation = false;
-                }
-
+					continuation = false;
+				}
+           
             }
 
             if (actuelleSerie > recordSerie) {
                 recordSerie = actuelleSerie;
             }
-            i++;
-
-        }
-        displayTab(t);
-        System.out.println("Plus grande série de nb: " + recordSerie);
+            i++; 
+           
+		}
+		displayTab(t);
+		System.out.println("Plus grande série de nb: " + recordSerie);	
+		System.out.println("Indice actuel d'arrêt: " + i);	
+		// System.out.println(  i);	
     }
 
     void displayTab(int[] t) {
@@ -319,6 +323,7 @@ _Exemple d'exécution 1_
 ```
 {5,7,0,6,10,8,9,10,35}
 Plus grande série de nb: 4
+Indice actuel d'arrêt: 8
 
 
 ------------------
@@ -328,6 +333,7 @@ _Exemple d'exécution 2_
 ```
 {4,3,2,1}
 Plus grande série de nb: 1
+Indice actuel d'arrêt: 3
 
 
 ------------------
@@ -337,24 +343,33 @@ _Exemple d'exécution 3_
 ```
 {5,7,0,6,10,8,9,10,35,0}
 Plus grande série de nb: 4
+Indice actuel d'arrêt: 9
 
 
 ------------------
 (program exited with code: 0)
-
 ```
 
 _Exemple d'exécution 5_
 ```
 {5}
 Plus grande série de nb: 1
+Indice actuel d'arrêt: 0
 
 
 ------------------
 (program exited with code: 0)
-
 ```
+_Exemple d'exécution 6_
+```
+{4,0,5,6,10,3,4,2}
+Plus grande série de nb: 4
+Indice actuel d'arrêt: 5
 
+
+------------------
+(program exited with code: 0)
+```
 ## Exercice 4
 _Code :_
 ```java
