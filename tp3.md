@@ -532,9 +532,8 @@ _Exemple d'exécution 3_
 
 ## Exercice 6
 
-_Boucle for ou boucle while :_
-La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
-
+_Rôle des 2 boucles :_
+La première boucle est un "do while" c'est le plus adapter lorsque qu'on demande une valeur à l'utilisateur car elle le demandera au moins une fois et ce jusqu'à ce que la valeur sois correcte selon nos paramètres. Et la deuxième boucle est un "while" car tant que le nombre n'a pas atteint (ici 1) on continue de faire des calculs, elle est préférable a une boucle "do while" car avant de rentrer dans la boucle elle vérifie si ce nombre n'est pas déjà 1.
 _Code :_
 ```java
 /**
