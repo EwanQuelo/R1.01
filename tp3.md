@@ -514,6 +514,10 @@ _Exemple d'exécution 3_
 ```
 
 ## Exercice 6
+
+_Boucle for ou boucle while :_
+La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
+
 _Code :_
 ```java
 /**
