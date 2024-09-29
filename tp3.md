@@ -11,7 +11,8 @@
 _Code :_
 ```java
 /**
- * ROLE
+ * Décalle les éléments d'un tableau vers la droite et le dernier éléments
+ * devient le premier
  * @author Ewan QUÉLO
  */
 
@@ -72,8 +73,8 @@ Apres décallage	 : {4,5,6,9,10,28,0,0}
 _Code :_
 ```java
 /**
- * ROLE
- * 
+ * Décalle les éléments d'un tableau vers la droite et le dernier éléments
+ * devient le premier
  * @author Ewan QUÉLO
  */
 
@@ -134,7 +135,7 @@ Apres	 : {4,5,6,9,10,28,0,0}
 _Code :_
 ```java
 /**
- * ROLE
+ * Créé un tableau cumulatif qui a chaque élément du tab t ajoute les précédents
  * @author Ewan QUÉLO
  */
 
@@ -147,16 +148,16 @@ class Exo2 {
         displayTab(t);
 
         // CODE :
-		int[] cumul = new int[t.length];
-		int i = 0;
-		int total = 0;
-		
-		while(i< t.length) {
-			total += t[i];
-			cumul[i] = total;
-			i++;
-		}
-       
+        int[] cumul = new int[t.length];
+        int i = 0;
+        int total = 0;
+
+        while (i < t.length) {
+            total += t[i];
+            cumul[i] = total;
+            i++;
+        }
+
         // APRES
         System.out.print("CUMUL\t : ");
         displayTab(cumul);
@@ -172,7 +173,6 @@ class Exo2 {
         System.out.println(t[i] + "}");
     }
 }
-
 ```
 
 _Exemple d'exécution 1_
@@ -199,7 +199,7 @@ CUMUL	 : {1,3,6,10,15,21,28,36,45,55}
 _Code :_
 ```java
 /**
- * ROLE
+ * Créé un tableau cumulatif qui a chaque élément du tab t ajoute les précédents
  * @author Ewan QUÉLO
  */
 
@@ -212,14 +212,14 @@ class Exo2 {
         displayTab(t);
 
         // CODE :
-		int[] cumul = new int[t.length];
-		int total = 0;
-		
-		for(int i = 0; i < t.length; i++) {
-			total += t[i];
-			cumul[i] = total;
-		}
-       
+        int[] cumul = new int[t.length];
+        int total = 0;
+
+        for (int i = 0; i < t.length; i++) {
+            total += t[i];
+            cumul[i] = total;
+        }
+
         // APRES
         System.out.print("CUMUL\t : ");
         displayTab(cumul);
@@ -265,42 +265,42 @@ La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
 _Code avec boucle "while" :_
 ```java
 /**
- * ROLE
+ * Recherche la plus grande série d'entiers strictement croissants dans un
+ * tableau
  * @author Ewan QUÉLO
  */
 
 class Exo3 {
     void principal() {
         // int[] t = { 4, 3, 2, 1 }; // 5
-         int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35}; // REP 4
+        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35 }; // REP 4
         // int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 }; // REP 4
         // int[] t = { 5 }; //1
 
-        int actuelleSerie = 1;  
-        int recordSerie = 1; 
-        int i = 0; 
+        int actuelleSerie = 1;
+        int recordSerie = 1;
+        int i = 0;
         boolean continuation = true;
 
- 
-        while (i < t.length - 1 && continuation ) {
+        while (i < t.length - 1 && continuation) {
             if (t[i + 1] > t[i]) {
                 actuelleSerie++;
             } else {
-                actuelleSerie = 1; 
-                 if ((t.length - i) <= recordSerie) {
-                continuation = false;
-				}
-                
+                actuelleSerie = 1;
+                if ((t.length - i) <= recordSerie) {
+                    continuation = false;
+                }
+
             }
 
             if (actuelleSerie > recordSerie) {
                 recordSerie = actuelleSerie;
             }
-            i++; 
-           
-		}
-		displayTab(t);
-		System.out.println("Plus grande série de nb: " + recordSerie);	
+            i++;
+
+        }
+        displayTab(t);
+        System.out.println("Plus grande série de nb: " + recordSerie);
     }
 
     void displayTab(int[] t) {
@@ -313,7 +313,6 @@ class Exo3 {
         System.out.println(t[i] + "}");
     }
 }
-
 ```
 
 _Exemple d'exécution 1_
@@ -345,7 +344,7 @@ Plus grande série de nb: 4
 
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 5_
 ```
 {5}
 Plus grande série de nb: 1
@@ -360,49 +359,51 @@ Plus grande série de nb: 1
 _Code :_
 ```java
 /**
- * ROLE
+ * Recherche la plus grande série d'entiers strictement croissants dans un tableau donné
+ * Et affiche l'indice de départ de la série et de fin
+ * 
  * @author Ewan QUÉLO
  */
 
 class Exo4 {
     void principal() {
         // int[] t = { 4, 3, 2, 1 }; // 5
-        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35}; // REP 4
+        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35 }; // REP 4
         // int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 }; // REP 4
         // int[] t = { 5 }; //1
 
-        int actuelleSerie = 1;  
-        int recordSerie = 1; 
-        int i = 0; 
+        int actuelleSerie = 1;
+        int recordSerie = 1;
+        int i = 0;
         boolean continuation = true;
-        
+
         int indiceDebut = 0;
-		int indiceFin = 0;
+        int indiceFin = 0;
         int indiceActuelle = 0;
- 
-        while (i < t.length - 1 && continuation ) {
+
+        while (i < t.length - 1 && continuation) {
             if (t[i + 1] > t[i]) {
                 actuelleSerie++;
             } else {
-                actuelleSerie = 1; 
+                actuelleSerie = 1;
                 indiceActuelle = i + 1;
-                
+
                 if ((t.length - i) <= recordSerie) {
-                continuation = false;
-				}
-			}
+                    continuation = false;
+                }
+            }
 
             if (actuelleSerie > recordSerie) {
                 recordSerie = actuelleSerie;
-                indiceDebut = indiceActuelle; 
-                indiceFin = i + 1;         
+                indiceDebut = indiceActuelle;
+                indiceFin = i + 1;
             }
-            i++; 
-           
-		}
-		displayTab(t);
-		System.out.println("Plus grande série de nb: " + recordSerie);	
-		System.out.println("La série commence à l'indice: " + indiceDebut + " et termine: " + indiceFin);
+            i++;
+
+        }
+        displayTab(t);
+        System.out.println("Plus grande série de nb: " + recordSerie);
+        System.out.println("La série commence à l'indice: " + indiceDebut + " et termine: " + indiceFin);
     }
 
     void displayTab(int[] t) {
@@ -462,18 +463,19 @@ La série commence à l'indice: 5 et termine: 8
 _Code :_
 ```java
 /**
- * ROLE
+ * Affiche un tableau qui dit selon un tirage de 1000 fois le nb de fois ou sont
+ * sortis les nb de 0 à 9
  * @author Ewan QUÉLO
  */
 
 class Exo5 {
     void principal() {
-        int[] t = new int[10];  
+        int[] t = new int[10];
         for (int i = 0; i < 1000; i++) {
-            int nbRandom = (int)(Math.random() * 10);  
-            t[nbRandom]++;               
+            int nbRandom = (int) (Math.random() * 10);
+            t[nbRandom]++;
         }
-		displayTab(t);
+        displayTab(t);
     }
 
     void displayTab(int[] t) {
@@ -521,26 +523,27 @@ La boucle while est plus adapter lorsqu'il y a plusieurs conditions à vérifier
 _Code :_
 ```java
 /**
- * ROLE
+ * Selon le nb strictement supérieur à 0 choisi par l'utilisateur on lui affiche le
+ * nb de fois qu'il faut d'étapes pour arrive à 1
+ * 
  * @author Ewan QUÉLO
  */
 
 class Exo6 {
     void principal() {
-		int nbChoisi =0;
-		
+        int nbChoisi = 0;
+
         do {
-			nbChoisi = SimpleInput.getInt("Donnez un nombre strictement positif: ");
-		} while(nbChoisi < 1);
-        
+            nbChoisi = SimpleInput.getInt("Donnez un nombre strictement positif: ");
+        } while (nbChoisi < 1);
+
         int nbEtape = 0;
         int nbMaxRencontre = 0;
-        
+
         while (nbChoisi != 1) {
             if (nbChoisi % 2 == 0) {
                 nbChoisi = nbChoisi / 2;
-            } 
-            else {
+            } else {
                 nbChoisi = (nbChoisi * 3) + 1;
             }
 
@@ -550,10 +553,10 @@ class Exo6 {
 
             nbEtape++;
         }
-        
+
         System.out.println("Nb étapes pour arriver à 1 : " + nbEtape);
-        System.out.println( "Nb max rencontré : " + nbMaxRencontre);
-		
+        System.out.println("Nb max rencontré : " + nbMaxRencontre);
+
     }
 }
 ```
@@ -594,39 +597,39 @@ Nb max rencontré : 9232
 _Code :_
 ```java
 /**
- * ROLE
+ * On regarde si les nb donnés dans un ordre par l'utilisateur sont dans le tableau dans le même ordre
+ * 
  * @author Ewan QUÉLO
  */
 
 class Exo7 {
     void principal() {
-		int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 };
-		
-		System.out.println("Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t");
-		int nbA = SimpleInput.getInt("Votre nombre a: ");
-		int nbB = SimpleInput.getInt("Votre nombre b: ");
-	
-		boolean aAtteint = false;
+        int[] t = { 5, 7, 0, 6, 10, 8, 9, 10, 35, 0 };
+
+        System.out.println("Donnez 2 nombres et je vérifie s'ils sont dans l'ordre dans le tableau t");
+        int nbA = SimpleInput.getInt("Votre nombre a: ");
+        int nbB = SimpleInput.getInt("Votre nombre b: ");
+
+        boolean aAtteint = false;
         boolean bAtteint = false;
-        
+
         int i = 0;
         while (i < t.length) {
             if (!aAtteint && t[i] == nbA) {
                 aAtteint = true;
-            } 
-            else if (aAtteint && t[i] == nbB) {
+            } else if (aAtteint && t[i] == nbB) {
                 bAtteint = true;
             }
             i++;
         }
         if (aAtteint && bAtteint) {
-            System.out.println( nbA + " et " + nbB + " sont présents dans cet ordre dans le tableau t suivant:");
+            System.out.println(nbA + " et " + nbB + " sont présents dans cet ordre dans le tableau t suivant:");
         } else {
             System.out.println(nbA + " et " + nbB + " ne sont pas dans l'ordre dans le tableau t suivant:");
         }
-		displayTab(t);
+        displayTab(t);
     }
-    
+
     void displayTab(int[] t) {
         int i = 0;
         System.out.print("{");
@@ -692,11 +695,98 @@ Votre nombre b: 19
 ## Exercice 8
 _Code :_
 ```java
+/**
+ * On entrelace 2 tableaux en prenant en compte leurs longueur respectives
+ * @author Ewan QUÉLO
+ */
 
+class Exo8 {
+    void principal() {
+        int[] t1 = { 1, 5, 3, 6, 7, 8 };
+        // int[] t2 = {1, 2, 4};
+        int[] t2 = { 1, 2, 4, 5, 6, 6 };
+        int[] tMix = new int[t1.length + t2.length];
+
+        // mélange
+        int i1 = 0;
+        int i2 = 0;
+        int iMix = 0;
+
+        while (i1 < t1.length && i2 < t2.length) {
+
+            tMix[iMix++] = t1[i1++];
+
+            tMix[iMix++] = t2[i2++];
+        }
+
+        while (i1 < t1.length) {
+            tMix[iMix++] = t1[i1++];
+        }
+
+        while (i2 < t2.length) {
+            tMix[iMix++] = t2[i2++];
+        }
+
+        // on affiche
+        System.out.println("Tableau 1: ");
+        displayTab(t1);
+        System.out.println("Tableau 2: ");
+        displayTab(t2);
+        System.out.println("Le mix des 2 tableaux : ");
+        displayTab(tMix);
+
+    }
+
+    void displayTab(int[] t) {
+        int i = 0;
+        System.out.print("{");
+        while (i < t.length - 1) {
+            System.out.print(t[i] + ",");
+            i = i + 1;
+        }
+        System.out.println(t[i] + "}");
+    }
+}
 ```
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
+Tableau 1: 
+{1,5,3,6,7,8}
+Tableau 2: 
+{1,2,4,5,6,6}
+Le mix des 2 tableaux : 
+{1,1,5,2,3,4,6,5,7,6,8,6}
 
+
+------------------
+(program exited with code: 0)
+
+```
+_Exemple d'exécution 2_
+```
+Tableau 1: 
+{1,5,3,6,7,8}
+Tableau 2: 
+{1,2,4}
+Le mix des 2 tableaux : 
+{1,1,5,2,3,4,6,7,8}
+
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 3_
+```
+Tableau 1: 
+{1}
+Tableau 2: 
+{1}
+Le mix des 2 tableaux : 
+{1,1}
+
+
+------------------
+(program exited with code: 0)
 ```
 
