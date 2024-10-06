@@ -122,11 +122,7 @@ class Exo1 {
     }
 
 }
-
 ```
-
-_Réponse rédigée :_
-Voici ma réponse ...
 
 _Execution factorielle(4)_
 ```
@@ -164,10 +160,7 @@ factorielle (2) 	= 2	 : OK
 ------------------
 (program exited with code: 0)
 ```
-_Exemple d'exécution_
-```
 
-```
 _Exécution testCombinaison()_
 ```
 *** testCombinaison()
@@ -180,10 +173,7 @@ Combinaison (0) et de(0) 	= 1	 : OK
 (program exited with code: 0)
 ```
 
-_Exemple d'exécution_
-```
 
-```
 
 ## Exercice 2
 _Code :_
@@ -260,7 +250,107 @@ Est ce que divise: true
 ## Exercice 3
 _Code :_
 ```java
+/**
+ * ROLE
+ * 
+ * @author Ewan QUÉLO
+ */
 
+class Exo3 {
+    void principal() {
+        /*
+         * System.out.println("Est ce que 6 est parfait: " + estParfait(6));
+         * System.out.println("Est ce que 28 est parfait: " + estParfait(28));
+         * System.out.println("Est ce que 496 est parfait: " + estParfait(496));
+         * System.out.println("Est ce que 1 est parfait: " + estParfait(1));
+         * System.out.println("Est ce que 4745 est parfait: " + estParfait(4745));
+         */
+        // System.out.println("Est ce que 6 est parfait: " + estParfait(6));
+        // System.out.println("Est ce que 1 est parfait: " + estParfait(1));
+        // testParfait();
+        quatreNbParfaits();
+    }
+
+    /**
+     * teste la divisibilité de deux entiers
+     * 
+     * @param p entier positif à tester pour la divisibilité
+     * @param q diviseur strictement positif
+     * @return vrai ssi q divise p
+     */
+    boolean estDiviseur(int p, int q) {
+        boolean verif = false;
+        if (q != 0) {
+            int res = p % q;
+            if (res == 0) {
+                verif = true;
+            }
+        }
+        return verif;
+    }
+
+    /**
+     * teste si un nombre est parfait
+     * 
+     * @param a entier positif
+     * @return vrai ssi a est un nombre parfait
+     */
+    boolean estParfait(int a) {
+        int somme = 0;
+
+        for (int i = 1; i < a; i++) {
+            if (estDiviseur(a, i)) {
+                somme += i;
+            }
+        }
+
+        return somme == a;
+
+    }
+
+    void testParfait() {
+        System.out.println();
+        System.out.println("*** testEstParfait()");
+        testCasEstParfait(6, true);
+        testCasEstParfait(28, true);
+        testCasEstParfait(496, true);
+        testCasEstParfait(23, false);
+        testCasEstParfait(1, false);
+        testCasEstParfait(43, false);
+    }
+
+    void testCasEstParfait(int n, boolean result) {
+        // Affichage
+        System.out.print(n + " est un nombre parfait " + " \t= " + result + "\t : ");
+
+        // Verification
+        if (estParfait(n) == result) {
+            System.out.println("OK");
+        } else {
+            System.err.println("ERREUR");
+        }
+    }
+
+    /**
+     * Affiche les quatre premiers nombres parfaits
+     */
+    void quatreNbParfaits() {
+        int i = 0;
+        int nombre = 0;
+        System.out.println("Voici les 4 premiers nombres parfaits: ");
+        while (i < 4) {
+            if (estParfait(nombre)) {
+                System.out.println(nombre);
+                i++;
+            }
+            nombre++;
+            if (nombre % 10000 == 0) {
+                System.out.println(nombre);
+            }
+        }
+    }
+
+}
 ```
 
 _Execution méthode `estParfait()`_
@@ -287,33 +377,47 @@ _Execution méthode `testEstParfait()`_
 (program exited with code: 0)
 
 ```
+_Execution méthode `quatreNbParfaits()`_
+```
+Voici les 4 premiers nombres parfaits: 
+0
+6
+28
+496
+
+
+------------------
+(program exited with code: 0)
+```
+
 ## Exercice 4
 _Code :_
 ```java
 /**
  * ROLE
+ * 
  * @author Ewan QUÉLO
  */
 
 class Exo4 {
     void principal() {
-		//int[] tab1 = {1, 2, 3, 4, 5};
-		//int[] tab1 = {5, 3, 2, 1};
-		//int[] tab1 = {2, 2, 2, 2};
-		//int[] tab1 = {7};
-		//int[] tab1 = {};
-		//int[] tab1 = {1, 3, 2, 4};
-		//System.out.println("Tab1 est t'il croissant: " + estCroissant(tab1));
-		
-		testEstCroissant();
-	 }
-	 
-	 
-	 /**
+        // int[] tab1 = {1, 2, 3, 4, 5};
+        // int[] tab1 = {5, 3, 2, 1};
+        // int[] tab1 = {2, 2, 2, 2};
+        // int[] tab1 = {7};
+        // int[] tab1 = {};
+        // int[] tab1 = {1, 3, 2, 4};
+        // System.out.println("Tab1 est t'il croissant: " + estCroissant(tab1));
+
+        testEstCroissant();
+    }
+
+    /**
      * Vérifie si les valeurs d'un tableau sont triées en ordre croissant.
      * 
      * @param t tableau d'entiers
-     * @return vrai si et seulement si les valeurs du tableau sont en ordre croissant
+     * @return vrai si et seulement si les valeurs du tableau sont en ordre
+     *         croissant
      */
     boolean estCroissant(int[] t) {
         boolean estTrie = true; // Initialiser la variable de retour à true
@@ -324,32 +428,32 @@ class Exo4 {
         }
         return estTrie; // Un seul return ici
     }
-    
+
     /**
      * Exécute plusieurs tests de estCroissant()
      */
     void testEstCroissant() {
         System.out.println();
         System.out.println("*** testEstCroissant()");
-        int[] tab1 = {1, 2, 3, 4, 5};
+        int[] tab1 = { 1, 2, 3, 4, 5 };
         testCasEstCroissant(tab1, true);
-        int[] tab2 = {5, 3, 2, 1};
+        int[] tab2 = { 5, 3, 2, 1 };
         testCasEstCroissant(tab2, false);
-        int[] tab3 = {2, 2, 2, 2};
+        int[] tab3 = { 2, 2, 2, 2 };
         testCasEstCroissant(tab3, true);
-        int[] tab4 = {7};
+        int[] tab4 = { 7 };
         testCasEstCroissant(tab4, true);
         int[] tab5 = {};
         testCasEstCroissant(tab5, true);
-        int[] tab6 = {1, 3, 2, 4};
+        int[] tab6 = { 1, 3, 2, 4 };
         testCasEstCroissant(tab6, false);
-        
+
     }
-	
-	/**
+
+    /**
      * Teste un cas et affiche le résultat du test.
      * 
-     * @param tab le tableau à tester
+     * @param tab    le tableau à tester
      * @param result le résultat attendu (true si trié, false sinon)
      */
     void testCasEstCroissant(int[] tab, boolean result) {
@@ -364,15 +468,15 @@ class Exo4 {
             System.err.println("ERREUR");
         }
     }
-    
+
     /**
-     * Affichage d'un tableau 
+     * Affichage d'un tableau
      * 
      * @param t tableau d'entiers
      */
     void displayTab(int[] t) {
         System.out.print("{");
-        if (t.length != 0) { 
+        if (t.length != 0) {
             for (int i = 0; i < t.length; i++) {
                 System.out.print(t[i]);
                 if (i < t.length - 1) {
@@ -406,29 +510,33 @@ _Code :_
 ```java
 /**
  * ROLE
+ * 
  * @author Ewan QUÉLO
  */
 
 class Exo5 {
     void principal() {
-        // System.out.println("Nombre de fois ou le caractère 'e' apparait dans 'je mange': " + nbOcc("je mange", 'e'));
-        testNbOcc(); 
+        // System.out.println("Nombre de fois ou le caractère 'e' apparait dans 'je
+        // mange': " + nbOcc("je mange", 'e'));
+        testNbOcc();
     }
 
     /**
-     * Cherche combien de fois un caractère est présent dans une chaîne de caractères
+     * Cherche combien de fois un caractère est présent dans une chaîne de
+     * caractères
+     * 
      * @param chaine Chaine de caractères
-     * @param car Caractère à rechercher
+     * @param car    Caractère à rechercher
      * @return Nombre d'occurrences de car dans la chaine
      */
     int nbOcc(String chaineCara, char car) {
-        int compteur = 0; 
+        int compteur = 0;
         for (int i = 0; i < chaineCara.length(); i++) {
             if (chaineCara.charAt(i) == car) {
-                compteur++; 
+                compteur++;
             }
         }
-        return compteur; 
+        return compteur;
     }
 
     /**
@@ -437,7 +545,7 @@ class Exo5 {
     void testNbOcc() {
         System.out.println();
         System.out.println("*** testNbOcc()");
-		testCasNbOcc("", 'a', 0);
+        testCasNbOcc("", 'a', 0);
         testCasNbOcc("avion", 'a', 1);
         testCasNbOcc("avion", 'z', 0);
         testCasNbOcc("aaaa", 'a', 4);
@@ -449,11 +557,12 @@ class Exo5 {
      * Teste un cas particulier et affiche le résultat du test.
      * 
      * @param chaine la chaîne à tester
-     * @param car le caractère à rechercher
+     * @param car    le caractère à rechercher
      * @param result le résultat attendu (nombre d'occurrences)
      */
     void testCasNbOcc(String chaine, char car, int result) {
-        System.out.print("Dans la chaîne \"" + chaine + "\", le caractère '" + car + "' apparaît \t= " + result + "\t : ");
+        System.out.print(
+                "Dans la chaîne \"" + chaine + "\", le caractère '" + car + "' apparaît \t= " + result + "\t : ");
 
         if (nbOcc(chaine, car) == result) {
             System.out.println("OK");
