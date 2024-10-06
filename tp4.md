@@ -185,6 +185,7 @@ Résultat: -2
 (program exited with code: 0)
 ```
 
+
 ## Exercice 2
 _Code :_
 ```java
@@ -256,6 +257,7 @@ Est ce que divise: true
 (program exited with code: 0)
 
 ```
+
 
 ## Exercice 3
 _Code :_
@@ -399,6 +401,7 @@ Voici les 4 premiers nombres parfaits:
 (program exited with code: 0)
 ```
 
+
 ## Exercice 4
 _Code :_
 ```java
@@ -512,6 +515,7 @@ _Execution méthode `testEstCroissant()`_
 ------------------
 (program exited with code: 0)
 ```
+
 
 ## Exercice 5
 _Code :_
