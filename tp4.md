@@ -173,7 +173,17 @@ Combinaison (0) et de(0) 	= 1	 : OK
 (program exited with code: 0)
 ```
 
+_BONUS :_
+Voici le résultat de la combinaison(25,24). Le résultat obtenu est "-2" a cause d'un overflow.
+Il faut donc utiliser des types qui permettent une plus grand capacité.
 
+```
+Résultat: -2
+
+
+------------------
+(program exited with code: 0)
+```
 
 ## Exercice 2
 _Code :_
