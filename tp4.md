@@ -465,7 +465,7 @@ class Exo5 {
 ```
 
 
-_Execution méthode `testEstCroissant()`_
+_Execution méthode `testCasNbOcc()`_
 ```
 *** testNbOcc()
 Dans la chaîne "", le caractère 'a' apparaît 	= 0	 : OK
