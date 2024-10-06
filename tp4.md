@@ -401,4 +401,82 @@ _Execution méthode `testEstCroissant()`_
 (program exited with code: 0)
 ```
 
+## Exercice 5
+_Code :_
+```java
+/**
+ * ROLE
+ * @author Ewan QUÉLO
+ */
+
+class Exo5 {
+    void principal() {
+        // System.out.println("Nombre de fois ou le caractère 'e' apparait dans 'je mange': " + nbOcc("je mange", 'e'));
+        testNbOcc(); 
+    }
+
+    /**
+     * Cherche combien de fois un caractère est présent dans une chaîne de caractères
+     * @param chaine Chaine de caractères
+     * @param car Caractère à rechercher
+     * @return Nombre d'occurrences de car dans la chaine
+     */
+    int nbOcc(String chaineCara, char car) {
+        int compteur = 0; 
+        for (int i = 0; i < chaineCara.length(); i++) {
+            if (chaineCara.charAt(i) == car) {
+                compteur++; 
+            }
+        }
+        return compteur; 
+    }
+
+    /**
+     * Exécute les tests de nbOcc()
+     */
+    void testNbOcc() {
+        System.out.println();
+        System.out.println("*** testNbOcc()");
+		testCasNbOcc("", 'a', 0);
+        testCasNbOcc("avion", 'a', 1);
+        testCasNbOcc("avion", 'z', 0);
+        testCasNbOcc("aaaa", 'a', 4);
+        testCasNbOcc("apparaît", 'a', 3);
+        testCasNbOcc("1299202//..?/", 'h', 0);
+    }
+
+    /**
+     * Teste un cas particulier et affiche le résultat du test.
+     * 
+     * @param chaine la chaîne à tester
+     * @param car le caractère à rechercher
+     * @param result le résultat attendu (nombre d'occurrences)
+     */
+    void testCasNbOcc(String chaine, char car, int result) {
+        System.out.print("Dans la chaîne \"" + chaine + "\", le caractère '" + car + "' apparaît \t= " + result + "\t : ");
+
+        if (nbOcc(chaine, car) == result) {
+            System.out.println("OK");
+        } else {
+            System.err.println("ERREUR");
+        }
+    }
+}
+```
+
+
+_Execution méthode `testEstCroissant()`_
+```
+*** testNbOcc()
+Dans la chaîne "", le caractère 'a' apparaît 	= 0	 : OK
+Dans la chaîne "avion", le caractère 'a' apparaît 	= 1	 : OK
+Dans la chaîne "avion", le caractère 'z' apparaît 	= 0	 : OK
+Dans la chaîne "aaaa", le caractère 'a' apparaît 	= 4	 : OK
+Dans la chaîne "apparaît", le caractère 'a' apparaît 	= 3	 : OK
+Dans la chaîne "1299202//..?/", le caractère 'h' apparaît 	= 0	 : OK
+
+
+------------------
+(program exited with code: 0)
+```
 
