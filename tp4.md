@@ -10,7 +10,7 @@
 _Code :_
 ```java
 /**
- * ROLE
+ * Test d'un appel de la fonction combinaison avec la fonction testcombinaison()
  * 
  * @author Ewan QUÉLO
  */
@@ -21,9 +21,9 @@ class Exo1 {
         // System.out.println(factorielle(4));
         // testCasFactorielle(4, 24);
 
-        System.out.println("Résultat: " + combinaison(8, 4));
+        //System.out.println("Résultat: " + combinaison(8, 4));
         // System.out.println("Résultat: " + factorielle(4));
-        // testCombinaison ();
+         testCombinaison ();
         // testFactorielle();
     }
 
@@ -179,7 +179,7 @@ Combinaison (0) et de(0) 	= 1	 : OK
 _Code :_
 ```java
 /**
- * ROLE
+ * Permet de savoir si un nombre est le diviseur d'un autre
  * 
  * @author Ewan QUÉLO
  */
@@ -251,8 +251,7 @@ Est ce que divise: true
 _Code :_
 ```java
 /**
- * ROLE
- * 
+ * Détermine les quaters premiers nombres parfaits
  * @author Ewan QUÉLO
  */
 
@@ -394,8 +393,7 @@ Voici les 4 premiers nombres parfaits:
 _Code :_
 ```java
 /**
- * ROLE
- * 
+ * Verifie si les nombres présent dans un tableau sont croissant
  * @author Ewan QUÉLO
  */
 
@@ -509,8 +507,7 @@ _Execution méthode `testEstCroissant()`_
 _Code :_
 ```java
 /**
- * ROLE
- * 
+ * Permet de savoir combien de fois un caractère apparaît dans une chaîne de caractère
  * @author Ewan QUÉLO
  */
 
