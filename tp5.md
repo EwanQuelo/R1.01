@@ -367,25 +367,6 @@ class Exo3 {
             System.err.println("ERREUR");
         }
     }
-    
-
-    /**
-     * Affichage d'un tableau
-     * 
-     * @param t tableau d'entiers
-     */
-    void displayTab(int[] t) {
-        System.out.print("{");
-        if (t.length != 0) {
-            for (int i = 0; i < t.length; i++) {
-                System.out.print(t[i]);
-                if (i < t.length - 1) {
-                    System.out.print(", ");
-                }
-            }
-        }
-        System.out.print("}");
-    }
 }
 ```
 
@@ -401,5 +382,16 @@ testCasCompteDiffVal({1}) 	= 1	 : OK
 
 ------------------
 (program exited with code: 0)
+```
+
+## Exercice 4
+_Code :_
+```java
+
+```
+
+_Exemple d'exécution_
+```
+
 ```
 
