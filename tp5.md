@@ -132,7 +132,9 @@ sontTousDiff({1}{1, 1, 1, 1, 1, 1}) 	= false	 : OK
 _Code :_
 ```java
 /**
- * ROLE
+ * permet plusieurs choses sur un tableau:
+ * Décaler une valeur de 1 a gauche; de N vers la gauche
+ * Chercher l'indice d'une valeur dans un tab; remettre la valeur souhaitée jusqu'à l'indice 0
  * 
  * @author Ewan QUÉLO
  */
@@ -286,7 +288,7 @@ après: {92, 93, 75, 7, 3, 10, 6, 20, 5}
 _Code :_
 ```java
 /**
- * ROLE
+ * Permet de savoir combien il y a de différentes valeurs dans un tableau
  * 
  * @author Ewan QUÉLO
  */
@@ -388,7 +390,7 @@ testCasCompteDiffVal({1}) 	= 1	 : OK
 _Code :_
 ```java
 /**
- * ROLE
+ * pour tester si une chaîne est une sous-chaîne d'une autre.
  * 
  * @author Ewan QUÉLO
  */
@@ -475,7 +477,7 @@ testCasEstSousChaine("absesavion", "ses") 	= false	 : OK
 _Code :_
 ```java
 /**
- * ROLE
+ * Trie les entiers donnés par l'user et les classe par ordre croissant
  * 
  * @author Ewan QUÉLO
  */
