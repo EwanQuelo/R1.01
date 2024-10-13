@@ -10,18 +10,19 @@
 _Code :_
 ```java
 /**
- * Permet de savoir si toutes les valeurs d'un tableau n'ont aucune valeur commmune
+ * Permet de savoir si toutes les valeurs d'un tableau n'ont aucune valeur
+ * commmune
  * 
  * @author Ewan QUÉLO
  */
 
 class Exo1 {
     void principal() {
-        //int[] t1 = { 1, 2, 3, 4, 5, 6 };
-        //int[] t2 = { 25,45,65};
-        //System.out.println("Ont des valeurs communes :" + sontTousDiff(t1, t2));
-        //displayTab(t1);
-        
+        // int[] t1 = { 1, 2, 3, 4, 5, 6 };
+        // int[] t2 = { 25,45,65};
+        // System.out.println("Ont des valeurs communes :" + sontTousDiff(t1, t2));
+        // displayTab(t1);
+
         testSontTousDiff();
     }
 
@@ -37,53 +38,53 @@ class Exo1 {
         boolean response = true;
         for (int i = 0; i < tab1.length; i++) {
             for (int j = 0; j < tab2.length; j++) {
-                if(tab1[i] == tab2[j]) {
+                if (tab1[i] == tab2[j]) {
                     response = false;
                 }
             }
         }
         return response;
     }
-    
-	/**
+
+    /**
      * Exécute plusieurs tests de sontTousDiff()
      */
-     void testSontTousDiff() {
+    void testSontTousDiff() {
         System.out.println();
         System.out.println("*** sontTousDiff()");
         int[] t1 = { 1, 2, 3, 4, 5, 6 };
-        int[] t2 = { 25,45,65};
+        int[] t2 = { 25, 45, 65 };
         testCasSontTousDiff(t1, t2, true);
         int[] t3 = {};
         int[] t4 = {};
         testCasSontTousDiff(t3, t4, true);
-        int[] t5 = {0};
-        int[] t6 = {0};
+        int[] t5 = { 0 };
+        int[] t6 = { 0 };
         testCasSontTousDiff(t5, t6, false);
-        int[] t7 = {8, 9, 10, 11, 12, 13};
-        int[] t8 = {8, 9, 10, 11, 12};
+        int[] t7 = { 8, 9, 10, 11, 12, 13 };
+        int[] t8 = { 8, 9, 10, 11, 12 };
         testCasSontTousDiff(t7, t8, false);
-        int[] t9 = { 1};
-        int[] t10 = {1, 1, 1, 1, 1, 1};
+        int[] t9 = { 1 };
+        int[] t10 = { 1, 1, 1, 1, 1, 1 };
         testCasSontTousDiff(t9, t10, false);
-   
-        
+
     }
-	
-	/**
+
+    /**
      * Teste un cas et affiche le résultat du test.
      * 
-     * @param tab1 le tableau à tester
+     * @param tab1   le tableau à tester
      * @param tab2
-     * @param result le résultat attendu (OK si la le test est identique au résultat, erreur sinon)
+     * @param result le résultat attendu (OK si la le test est identique au
+     *               résultat, erreur sinon)
      */
     void testCasSontTousDiff(int[] tab1, int[] tab2, boolean result) {
         // Affichage
-        
+
         System.out.print("sontTousDiff(");
         displayTab(tab1);
         displayTab(tab2);
-        
+
         System.out.print(") \t= " + result + "\t : ");
 
         // Verification
@@ -134,115 +135,118 @@ _Code :_
 /**
  * permet plusieurs choses sur un tableau:
  * Décaler une valeur de 1 a gauche; de N vers la gauche
- * Chercher l'indice d'une valeur dans un tab; remettre la valeur souhaitée jusqu'à l'indice 0
+ * Chercher l'indice d'une valeur dans un tab; remettre la valeur souhaitée
+ * jusqu'à l'indice 0
  * 
  * @author Ewan QUÉLO
  */
 
 class Exo2 {
     void principal() {
-		//decalerGauche
-		int[] tab1 = {3, 10, 6, 20, 7};
-		System.out.println("Decaler a gauche d'une 1 valeur: ");
-		System.out.print("avant: ");
-		displayTab(tab1);
-		System.out.println();
-		System.out.print("après: ");
-		decalerGauche(tab1);
-		displayTab(tab1);
-		
-		// decalerGaucheN
-		int[] tab2 = {3, 10, 6, 20, 7};
-		System.out.println();
-		System.out.println("********************************");
-		System.out.println("Decaler a gauche de valeur n = 3:");
-		System.out.print("avant: ");
-		displayTab(tab2);
-		System.out.println();
-		System.out.print("après: ");
-		decalerGaucheN(tab2, 3);
-		displayTab(tab2);
-		System.out.println();
+        // decalerGauche
+        int[] tab1 = { 3, 10, 6, 20, 7 };
+        System.out.println("Decaler a gauche d'une 1 valeur: ");
+        System.out.print("avant: ");
+        displayTab(tab1);
+        System.out.println();
+        System.out.print("après: ");
+        decalerGauche(tab1);
+        displayTab(tab1);
 
-		// cherche l'indice de la première occurrence
-		int[] tab3 = {3, 10, 6, 20, 5, 92, 93, 75, 7};		
-		System.out.println("********************************");
-		displayTab(tab3);
-		System.out.println();
-		System.out.println("cherche l'indice de la première occurrence de 92:");
-		System.out.print("A l'indice : " + indiceTab(tab3, 92));
-		
-		// decale pour ramener la valeur souhaiter en premier
-		int[] tab4 = {3, 10, 6, 20, 5, 92, 93, 75, 7};		
-		System.out.println("********************************");
-		System.out.print("avant: ");
-		displayTab(tab4);
-		System.out.println();
-		System.out.print("après: ");
-		decaleValeur(tab4, 92);
-		displayTab(tab4);
-		System.out.println();
-		
+        // decalerGaucheN
+        int[] tab2 = { 3, 10, 6, 20, 7 };
+        System.out.println();
+        System.out.println("********************************");
+        System.out.println("Decaler a gauche de valeur n = 3:");
+        System.out.print("avant: ");
+        displayTab(tab2);
+        System.out.println();
+        System.out.print("après: ");
+        decalerGaucheN(tab2, 3);
+        displayTab(tab2);
+        System.out.println();
+
+        // cherche l'indice de la première occurrence
+        int[] tab3 = { 3, 10, 6, 20, 5, 92, 93, 75, 7 };
+        System.out.println("********************************");
+        displayTab(tab3);
+        System.out.println();
+        System.out.println("cherche l'indice de la première occurrence de 92:");
+        System.out.print("A l'indice : " + indiceTab(tab3, 92));
+
+        // decale pour ramener la valeur souhaiter en premier
+        int[] tab4 = { 3, 10, 6, 20, 5, 92, 93, 75, 7 };
+        System.out.println("********************************");
+        System.out.print("avant: ");
+        displayTab(tab4);
+        System.out.println();
+        System.out.print("après: ");
+        decaleValeur(tab4, 92);
+        displayTab(tab4);
+        System.out.println();
+
     }
+
     /**
      * décale les entiers d’un tableau d’une position vers la gauche
      * L’élément en 0 se retrouve à la fin du tableau
+     * 
      * @param tab tableau d’entiers
      */
-     void decalerGauche (int[] tab) {
-		  //verif si pas de longueur 0
-		    if (tab.length != 0) {
-				int stock = tab[0];
-				for(int i = 0; i < tab.length - 1 ; i++){
-					tab[i] = tab[i+1];
-				}
-				tab[tab.length - 1] = stock;
-			}	
-	}
-	
-	/**
-       * décale les entiers d’un tableau de n positions vers la gauche
-       * @param tab tableau d’entiers
-       * @param n entier nombre de cases à décaler
-       */
-       void decalerGaucheN (int[] tab, int n){
-		   for (int i = 0; i<n; i++){
-			   decalerGauche(tab);
-			}
-		    
-		}
-		
-	/**
-      * cherche l’indice de la premiere occurrence d’une valeur dans un tableau
-      * @param tab tableau d’entiers
-      * @param v valeur à chercher
-      * @return l’indice de la première valeur v dans tab si v est dans tab, -1 sinon
-      */
-      int indiceTab (int[] tab, int v){
-		  int response = -1;
-		  for (int i = 0; i < tab.length && response == -1; i++) {
-			  if (tab[i] == v ) {
-				  response = i;
-			  }
-		  }
-		  return response;
-	  }
-	  
-	  /**
-      * décale les valeurs d’un tableau de manière à ramener la valeur cherchée
-      * à l’indice 0
-      * Si la valeur n’est pas présente, le tableau n’est pas modifié
-      * @param tab tableau d’entiers
-      * @param v valeur à chercher
-      */
-      void decaleValeur (int[] tab, int v) {
-		  int nbRepeat = indiceTab(tab, v);
-		  decalerGaucheN(tab, nbRepeat);
-	  }
-	  
-      
-      
-      
+    void decalerGauche(int[] tab) {
+        // verif si pas de longueur 0
+        if (tab.length != 0) {
+            int stock = tab[0];
+            for (int i = 0; i < tab.length - 1; i++) {
+                tab[i] = tab[i + 1];
+            }
+            tab[tab.length - 1] = stock;
+        }
+    }
+
+    /**
+     * décale les entiers d’un tableau de n positions vers la gauche
+     * 
+     * @param tab tableau d’entiers
+     * @param n   entier nombre de cases à décaler
+     */
+    void decalerGaucheN(int[] tab, int n) {
+        for (int i = 0; i < n; i++) {
+            decalerGauche(tab);
+        }
+
+    }
+
+    /**
+     * cherche l’indice de la premiere occurrence d’une valeur dans un tableau
+     * 
+     * @param tab tableau d’entiers
+     * @param v   valeur à chercher
+     * @return l’indice de la première valeur v dans tab si v est dans tab, -1 sinon
+     */
+    int indiceTab(int[] tab, int v) {
+        int response = -1;
+        for (int i = 0; i < tab.length && response == -1; i++) {
+            if (tab[i] == v) {
+                response = i;
+            }
+        }
+        return response;
+    }
+
+    /**
+     * décale les valeurs d’un tableau de manière à ramener la valeur cherchée
+     * à l’indice 0
+     * Si la valeur n’est pas présente, le tableau n’est pas modifié
+     * 
+     * @param tab tableau d’entiers
+     * @param v   valeur à chercher
+     */
+    void decaleValeur(int[] tab, int v) {
+        int nbRepeat = indiceTab(tab, v);
+        decalerGaucheN(tab, nbRepeat);
+    }
+
     /**
      * Affichage d'un tableau
      * 
@@ -295,22 +299,23 @@ _Code :_
 
 class Exo3 {
     void principal() {
-		//int[] compteDiffVal = {0, 0, 2, 3, 0, 2, 1, 3, 3, 0};
-		//displayTab(compteDiffVal);
-		
-		//System.out.println("Nb différents: " + compteDiffVal(compteDiffVal));
-		testCompteDiffVal();
+        // int[] compteDiffVal = {0, 0, 2, 3, 0, 2, 1, 3, 3, 0};
+        // displayTab(compteDiffVal);
+
+        // System.out.println("Nb différents: " + compteDiffVal(compteDiffVal));
+        testCompteDiffVal();
     }
 
-	/**
-	 * compte le nombre de valeurs différentes dans un tableau
-	 * @param tab    tableau d’entiers
-	 * @return le nombre de valeurs différentes du tableau
-	 */
-	int compteDiffVal(int[] tab) {
+    /**
+     * compte le nombre de valeurs différentes dans un tableau
+     * 
+     * @param tab tableau d’entiers
+     * @return le nombre de valeurs différentes du tableau
+     */
+    int compteDiffVal(int[] tab) {
         int[] stockDiff = new int[tab.length];
         int compteurDiff = 0;
-        
+
         for (int i = 0; i < tab.length; i++) {
             boolean trouve = false;
             for (int j = 0; j < compteurDiff; j++) {
@@ -323,43 +328,43 @@ class Exo3 {
                 stockDiff[compteurDiff++] = tab[i];
             }
         }
-        
+
         return compteurDiff;
     }
-    
+
     /**
      * Exécute plusieurs tests de compteDiffVal()
      */
-     void testCompteDiffVal() {
+    void testCompteDiffVal() {
         System.out.println();
         System.out.println("*** sontTousDiff()");
         int[] t1 = { 1, 2, 3, 4, 5, 6 };
         testCasCompteDiffVal(t1, 6);
         int[] t2 = {};
         testCasCompteDiffVal(t2, 0);
-        int[] t3 = {0};
+        int[] t3 = { 0 };
         testCasCompteDiffVal(t3, 1);
-        int[] t4 = {8, 8, 8, 8, 4, 8, 8, 8};
+        int[] t4 = { 8, 8, 8, 8, 4, 8, 8, 8 };
         testCasCompteDiffVal(t4, 2);
-        int[] t5 = {1};
+        int[] t5 = { 1 };
         testCasCompteDiffVal(t5, 1);
-   
-        
+
     }
-	
-	/**
+
+    /**
      * Teste un cas et affiche le résultat du test.
      * 
-     * @param tab1 le tableau à tester
+     * @param tab1   le tableau à tester
      * @param tab2
-     * @param result le résultat attendu (OK si la le test est identique au résultat, erreur sinon)
+     * @param result le résultat attendu (OK si la le test est identique au
+     *               résultat, erreur sinon)
      */
     void testCasCompteDiffVal(int[] tab1, int result) {
         // Affichage
-        
+
         System.out.print("testCasCompteDiffVal(");
         displayTab(tab1);
-        
+
         System.out.print(") \t= " + result + "\t : ");
 
         // Verification
@@ -397,12 +402,14 @@ _Code :_
 
 class Exo4 {
     void principal() {
-        // System.out.println("la chaîne 'ses' est t'elle contenu dans 'absesavion': " + estSousChaine("ses","absesavion"));
+        // System.out.println("la chaîne 'ses' est t'elle contenu dans 'absesavion': " +
+        // estSousChaine("ses","absesavion"));
         testEstSousChaine();
     }
 
     /**
      * teste si une chaîne est une sous-chaîne d’une autre
+     * 
      * @param mot    chaîne de caractères
      * @param phrase chaîne de carectères
      * @return vrai ssi mot est présent dans phrase
@@ -422,7 +429,7 @@ class Exo4 {
         }
         return estTrouve;
     }
-    
+
     /**
      * Exécute plusieurs tests de estSousChaine()
      */
@@ -441,9 +448,10 @@ class Exo4 {
     /**
      * Teste un cas et affiche le résultat du test.
      * 
-     * @param mot le mot à tester
+     * @param mot    le mot à tester
      * @param phrase la phrase à tester
-     * @param result le résultat attendu (OK si le test est identique au résultat, erreur sinon)
+     * @param result le résultat attendu (OK si le test est identique au résultat,
+     *               erreur sinon)
      */
     void testCasEstSousChaine(String mot, String phrase, boolean result) {
         // Affichage
@@ -454,7 +462,7 @@ class Exo4 {
         } else {
             System.err.println("ERREUR");
         }
-    }   
+    }
 }
 ```
 
@@ -483,38 +491,40 @@ _Code :_
  */
 
 class Exo5 {
-	final int LG_TAB = 4;
+    final int LG_TAB = 4;
+
     void principal() {
-		int[] tableauTrie = saisirEtTrier();
+        int[] tableauTrie = saisirEtTrier();
         displayTab(tableauTrie);
     }
-    
-	/**
-	 * Crée et saisit un tableau trié de LG_TAB entiers
-	 * @return tableau trié de LG-TAB entiers
-	 */
-	int[] saisirEtTrier () {
-		int[] t = new int[LG_TAB];
-		int i = 0;
 
-		while (i < t.length) {
-			t[i] = SimpleInput.getInt("Entrer un entier");
+    /**
+     * Crée et saisit un tableau trié de LG_TAB entiers
+     * 
+     * @return tableau trié de LG-TAB entiers
+     */
+    int[] saisirEtTrier() {
+        int[] t = new int[LG_TAB];
+        int i = 0;
 
-			int j = i;
-			while (j > 0 && t[j - 1] > t[j]) {
-				
-				int tmp = t[j];
-				t[j] = t[j - 1];
-				t[j - 1] = tmp;
-				j--;
-			}
-			i++;
-		}
+        while (i < t.length) {
+            t[i] = SimpleInput.getInt("Entrer un entier");
 
-		return t; 
-	}
-	
-	/**
+            int j = i;
+            while (j > 0 && t[j - 1] > t[j]) {
+
+                int tmp = t[j];
+                t[j] = t[j - 1];
+                t[j - 1] = tmp;
+                j--;
+            }
+            i++;
+        }
+
+        return t;
+    }
+
+    /**
      * Affichage d'un tableau
      * 
      * @param t tableau d'entiers
