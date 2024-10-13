@@ -387,12 +387,88 @@ testCasCompteDiffVal({1}) 	= 1	 : OK
 ## Exercice 4
 _Code :_
 ```java
+/**
+ * ROLE
+ * 
+ * @author Ewan QUÉLO
+ */
 
+class Exo4 {
+    void principal() {
+        // System.out.println("la chaîne 'ses' est t'elle contenu dans 'absesavion': " + estSousChaine("ses","absesavion"));
+        testEstSousChaine();
+    }
+
+    /**
+     * teste si une chaîne est une sous-chaîne d’une autre
+     * @param mot    chaîne de caractères
+     * @param phrase chaîne de carectères
+     * @return vrai ssi mot est présent dans phrase
+     */
+    boolean estSousChaine(String mot, String phrase) {
+        boolean estTrouve = false;
+        for (int i = 0; i <= phrase.length() - mot.length(); i++) {
+            boolean correspondance = true;
+            for (int j = 0; j < mot.length(); j++) {
+                if (phrase.charAt(i + j) != mot.charAt(j)) {
+                    correspondance = false;
+                }
+            }
+            if (correspondance) {
+                estTrouve = true;
+            }
+        }
+        return estTrouve;
+    }
+    
+    /**
+     * Exécute plusieurs tests de estSousChaine()
+     */
+    void testEstSousChaine() {
+        System.out.println();
+        System.out.println("*** estSousChaine()");
+
+        testCasEstSousChaine("ses", "absesavion", true);
+        testCasEstSousChaine("test", "absesavion", false);
+        testCasEstSousChaine("", "absesavion", true);
+        testCasEstSousChaine("ses", "", false);
+        testCasEstSousChaine("", "", true);
+        testCasEstSousChaine("absesavion", "ses", false);
+    }
+
+    /**
+     * Teste un cas et affiche le résultat du test.
+     * 
+     * @param mot le mot à tester
+     * @param phrase la phrase à tester
+     * @param result le résultat attendu (OK si le test est identique au résultat, erreur sinon)
+     */
+    void testCasEstSousChaine(String mot, String phrase, boolean result) {
+        // Affichage
+        System.out.print("testCasEstSousChaine(\"" + mot + "\", \"" + phrase + "\") \t= " + result + "\t : ");
+
+        if (estSousChaine(mot, phrase) == result) {
+            System.out.println("OK");
+        } else {
+            System.err.println("ERREUR");
+        }
+    }   
+}
 ```
 
 _Exemple d'exécution_
 ```
+*** estSousChaine()
+testCasEstSousChaine("ses", "absesavion") 	= true	 : OK
+testCasEstSousChaine("test", "absesavion") 	= false	 : OK
+testCasEstSousChaine("", "absesavion") 	= true	 : OK
+testCasEstSousChaine("ses", "") 	= false	 : OK
+testCasEstSousChaine("", "") 	= true	 : OK
+testCasEstSousChaine("absesavion", "ses") 	= false	 : OK
 
+
+------------------
+(program exited with code: 0)
 ```
 
 ## Exercice 5
