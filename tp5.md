@@ -395,3 +395,88 @@ _Exemple d'exécution_
 
 ```
 
+## Exercice 5
+_Code :_
+```java
+/**
+ * ROLE
+ * 
+ * @author Ewan QUÉLO
+ */
+
+class Exo5 {
+	final int LG_TAB = 4;
+    void principal() {
+		int[] tableauTrie = saisirEtTrier();
+        displayTab(tableauTrie);
+    }
+    
+	/**
+	 * Crée et saisit un tableau trié de LG_TAB entiers
+	 * @return tableau trié de LG-TAB entiers
+	 */
+	int[] saisirEtTrier () {
+		int[] t = new int[LG_TAB];
+		int i = 0;
+
+		while (i < t.length) {
+			t[i] = SimpleInput.getInt("Entrer un entier");
+
+			int j = i;
+			while (j > 0 && t[j - 1] > t[j]) {
+				
+				int tmp = t[j];
+				t[j] = t[j - 1];
+				t[j - 1] = tmp;
+				j--;
+			}
+			i++;
+		}
+
+		return t; 
+	}
+	
+	/**
+     * Affichage d'un tableau
+     * 
+     * @param t tableau d'entiers
+     */
+    void displayTab(int[] t) {
+        System.out.print("{");
+        if (t.length != 0) {
+            for (int i = 0; i < t.length; i++) {
+                System.out.print(t[i]);
+                if (i < t.length - 1) {
+                    System.out.print(", ");
+                }
+            }
+        }
+        System.out.print("}");
+    }
+}
+```
+
+_Exemple d'exécution 1_
+```
+Entrer un entier28
+Entrer un entier0
+Entrer un entier1
+Entrer un entier1
+{0, 1, 1, 28}
+
+------------------
+(program exited with code: 0)
+```
+_Exemple d'exécution 2_
+```
+Entrer un entier5
+Entrer un entier3
+Entrer un entier29
+Entrer un entier33330303
+{3, 5, 29, 33330303}
+
+------------------
+(program exited with code: 0)
+
+```
+
