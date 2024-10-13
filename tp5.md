@@ -10,7 +10,7 @@
 _Code :_
 ```java
 /**
- * ROLE
+ * Permet de savoir si toutes les valeurs d'un tableau n'ont aucune valeur commmune
  * 
  * @author Ewan QUÉLO
  */
