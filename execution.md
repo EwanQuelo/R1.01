@@ -21,7 +21,7 @@ _Exemple d'exécution_
 ## Code version JvsO
 
 
-_Exemple d'exécution_
+_Exemple d'exécution 1_
 ```
 
 
@@ -298,4 +298,861 @@ Do you want to play again ? ('0' for no or '1' for yes) 0
 ------------------
 (program exited with code: 0)
 
+```
+
+_Exemple d'exécution 2_
+```
+
+
+
+
+
+ 				  	  ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄█     ▄████████ ███▄▄▄▄   ▀█████████▄     ▄████████ ████████▄  
+				 	 ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███ ███    ███    ███ ███▀▀▀██▄   ███    ███   ███    ███ ███   ▀███ 
+ 					 ███   ███   ███   ███    ███   ███    ███ ███▌   ███    █▀  ███   ███   ███    ███   ███    ███ ███    ███ 
+ 					 ███   ███   ███   ███    ███  ▄███▄▄▄▄██▀ ███▌  ▄███▄▄▄     ███   ███  ▄███▄▄▄██▀    ███    ███ ███    ███ 
+ 					 ███   ███   ███ ▀███████████ ▀▀███▀▀▀▀▀   ███▌ ▀▀███▀▀▀     ███   ███ ▀▀███▀▀▀██▄  ▀███████████ ███    ███ 
+ 					 ███   ███   ███   ███    ███ ▀███████████ ███    ███    █▄  ███   ███   ███    ██▄   ███    ███ ███    ███ 
+ 					 ███   ███   ███   ███    ███   ███    ███ ███    ███    ███ ███   ███   ███    ███   ███    ███ ███   ▄███ 
+  					  ▀█   ███   █▀    ███    █▀    ███    ███ █▀     ██████████  ▀█   █▀  ▄█████████▀    ███    █▀  ████████▀  
+                                				    ███    ███                                                                  
+
+
+
+
+
+
+**********************LANGUAGE SELECTOR****************************
+Select your language by pressing the correct letter
+Selectionner votre langue en pressant la bonne lettre
+Seleccione su idioma pulsando la letra correcta
+*******************************************************************
+E | for english
+F | pour français
+S | Para espa
+*******************************************************************
+Choose an option: F
+
+****************************
+0 / Lire les règles
+1 / Jouer contre un ami
+2 / Jouer contre un bot
+3 / Stratégie gagnante
+4 / Arrêter le jeu
+****************************
+choisir une option: 2
+
+******DIFFICULTÉ DU BOT********
+-1 / Retourner au menu
+Choisissez une difficulté en écrivant un nombre entre 0 et 10
+(0 est facile et 10 est la plus difficile)
+****************************
+
+Quelle difficulté souhaitez-vous ? 0
+
+Entrez votre nom d'utilisateur : Ewan
+
+Combien de lignes souhaitez-vous ? 3
+
+******NIVEAU DE DIFFICULTÉ DU BOT : 0******
+
+Tablero: 
+0 :  | 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+Tour de Ewan
+
+Choisissez une ligne : 2
+
+Choisissez le nombre de bâtons que vous voulez retirer : 4
+
+Tablero: 
+0 :  | 
+1 :  |  |  | 
+2 :  | 
+
+Tour du bot : 
+
+Le bot joue de manière aléatoire.
+
+Le bot retire 1 bâton(s) de la ligne 0
+
+Tablero: 
+0 : 
+1 :  |  |  | 
+2 :  | 
+Tour de Ewan
+
+Choisissez une ligne : 1
+
+Choisissez le nombre de bâtons que vous voulez retirer : 2
+
+Tablero: 
+0 : 
+1 :  | 
+2 :  | 
+
+Tour du bot : 
+
+Le bot joue de manière aléatoire.
+
+Le bot retire 1 bâton(s) de la ligne 2
+
+Tablero: 
+0 : 
+1 :  | 
+2 : 
+Tour de Ewan
+
+Choisissez une ligne : 1
+
+Choisissez le nombre de bâtons que vous voulez retirer : 1
+
+Tablero: 
+0 : 
+1 : 
+2 : 
+
+Le gagnant est Ewan !
+
+Voulez-vous jouer de nouveau ? ('0' pour non ou '1' pour oui) 0
+
+
+------------------
+(program exited with code: 0)
+```
+
+_Exemple d'exécution 3_
+```
+
+
+
+
+
+ 				  	  ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄█     ▄████████ ███▄▄▄▄   ▀█████████▄     ▄████████ ████████▄  
+				 	 ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███ ███    ███    ███ ███▀▀▀██▄   ███    ███   ███    ███ ███   ▀███ 
+ 					 ███   ███   ███   ███    ███   ███    ███ ███▌   ███    █▀  ███   ███   ███    ███   ███    ███ ███    ███ 
+ 					 ███   ███   ███   ███    ███  ▄███▄▄▄▄██▀ ███▌  ▄███▄▄▄     ███   ███  ▄███▄▄▄██▀    ███    ███ ███    ███ 
+ 					 ███   ███   ███ ▀███████████ ▀▀███▀▀▀▀▀   ███▌ ▀▀███▀▀▀     ███   ███ ▀▀███▀▀▀██▄  ▀███████████ ███    ███ 
+ 					 ███   ███   ███   ███    ███ ▀███████████ ███    ███    █▄  ███   ███   ███    ██▄   ███    ███ ███    ███ 
+ 					 ███   ███   ███   ███    ███   ███    ███ ███    ███    ███ ███   ███   ███    ███   ███    ███ ███   ▄███ 
+  					  ▀█   ███   █▀    ███    █▀    ███    ███ █▀     ██████████  ▀█   █▀  ▄█████████▀    ███    █▀  ████████▀  
+                                				    ███    ███                                                                  
+
+
+
+
+
+
+**********************LANGUAGE SELECTOR****************************
+Select your language by pressing the correct letter
+Selectionner votre langue en pressant la bonne lettre
+Seleccione su idioma pulsando la letra correcta
+*******************************************************************
+E | for english
+F | pour français
+S | Para espa
+*******************************************************************
+Choose an option: S
+
+****************************
+0 / Leer las reglas
+1 / Jugar contra un amigo
+2 / Jugar contra un bot
+3 / Estrategia ganadora
+4 / Salir del juego
+****************************
+Elige una opción: 2
+
+******DIFICULTAD DEL BOT********
+-1 / Volver al menú
+Elige una dificultad escribiendo un número entre 0 y 10
+(0 es fácil y 10 la más difícil)
+****************************
+
+¿Qué dificultad deseas? 5
+
+Ingresa tu nombre de usuario: Ewan
+
+¿Cuántas filas deseas? 11
+
+******NIVEL DE DIFICULTAD DEL BOT: 5******
+
+Tablero: 
+0 :  | 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+3 :  |  |  |  |  |  |  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Turno de Ewan
+
+Elige una fila: 10
+
+Elige el número de palos que quieres quitar: 19
+
+Tablero: 
+0 :  | 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+3 :  |  |  |  |  |  |  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+
+Turno del bot: 
+
+El bot juega de manera aleatoria.
+
+El bot quita 4 palo(s) de la línea 3
+
+Tablero: 
+0 :  | 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+3 :  |  |  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+Turno de Ewan
+
+Elige una fila: 0
+
+Elige el número de palos que quieres quitar: 1
+
+Tablero: 
+0 : 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+3 :  |  |  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+
+Turno del bot: 
+
+El bot juega de manera aleatoria.
+
+El bot quita 2 palo(s) de la línea 3
+
+Tablero: 
+0 : 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+Turno de Ewan
+
+Elige una fila: 1
+
+Elige el número de palos que quieres quitar: 3
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+
+Turno del bot: 
+
+El bot juega de manera aleatoria.
+
+El bot quita 1 palo(s) de la línea 2
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+Turno de Ewan
+
+Elige una fila: 4
+
+Elige el número de palos que quieres quitar: 4
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10:  |  | 
+
+Turno del bot: 
+
+El bot juega de manera aleatoria.
+
+El bot quita 16 palo(s) de la línea 9
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10:  |  | 
+Turno de Ewan
+
+Elige una fila: 6
+
+Elige el número de palos que quieres quitar: 3
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10:  |  | 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 2 palo(s) de la línea 8
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10:  |  | 
+Turno de Ewan
+
+Elige una fila: 7
+
+Elige el número de palos que quieres quitar: 8
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  |  |  |  |  |  |  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10:  |  | 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 8 palo(s) de la línea 5
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10:  |  | 
+Turno de Ewan
+
+Elige una fila: 10
+
+Elige el número de palos que quieres quitar: 2
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  |  |  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 2 palo(s) de la línea 5
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 :  |  |  | 
+10: 
+Turno de Ewan
+
+Elige una fila: 9
+
+Elige el número de palos que quieres quitar: 3
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 :  | 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 : 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera aleatoria.
+
+El bot quita 1 palo(s) de la línea 3
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 : 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 :  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 : 
+10: 
+Turno de Ewan
+
+Elige una fila: 8
+
+Elige el número de palos que quieres quitar: 15
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 : 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 : 
+9 : 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 3 palo(s) de la línea 6
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 : 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  | 
+7 :  |  |  |  |  |  |  | 
+8 : 
+9 : 
+10: 
+Turno de Ewan
+
+Elige una fila: 7
+
+Elige el número de palos que quieres quitar: 7
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  |  | 
+3 : 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  | 
+7 : 
+8 : 
+9 : 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 1 palo(s) de la línea 2
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  | 
+3 : 
+4 :  |  |  |  |  | 
+5 :  | 
+6 :  |  |  |  |  |  |  | 
+7 : 
+8 : 
+9 : 
+10: 
+Turno de Ewan
+
+Elige una fila: 6
+
+Elige el número de palos que quieres quitar: 7
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  | 
+3 : 
+4 :  |  |  |  |  | 
+5 :  | 
+6 : 
+7 : 
+8 : 
+9 : 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 3 palo(s) de la línea 4
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  | 
+3 : 
+4 :  |  | 
+5 :  | 
+6 : 
+7 : 
+8 : 
+9 : 
+10: 
+Turno de Ewan
+
+Elige una fila: 4
+
+Elige el número de palos que quieres quitar: 2
+
+Tablero: 
+0 : 
+1 : 
+2 :  |  |  | 
+3 : 
+4 : 
+5 :  | 
+6 : 
+7 : 
+8 : 
+9 : 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera aleatoria.
+
+El bot quita 2 palo(s) de la línea 2
+
+Tablero: 
+0 : 
+1 : 
+2 :  | 
+3 : 
+4 : 
+5 :  | 
+6 : 
+7 : 
+8 : 
+9 : 
+10: 
+Turno de Ewan
+
+Elige una fila: 5
+
+Elige el número de palos que quieres quitar: 1
+
+Tablero: 
+0 : 
+1 : 
+2 :  | 
+3 : 
+4 : 
+5 : 
+6 : 
+7 : 
+8 : 
+9 : 
+10: 
+
+Turno del bot: 
+
+El bot juega de manera óptima.
+
+El bot quita 1 palo(s) de la línea 2
+
+Tablero: 
+0 : 
+1 : 
+2 : 
+3 : 
+4 : 
+5 : 
+6 : 
+7 : 
+8 : 
+9 : 
+10: 
+
+¡El bot gana!
+
+¿Quieres jugar de nuevo? ('0' para no o '1' para sí) 0
+
+
+------------------
+(program exited with code: 0)
+```
+
+_Exemple d'exécution 4_
+```
+
+
+
+
+
+ 				  	  ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄█     ▄████████ ███▄▄▄▄   ▀█████████▄     ▄████████ ████████▄  
+				 	 ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███ ███    ███    ███ ███▀▀▀██▄   ███    ███   ███    ███ ███   ▀███ 
+ 					 ███   ███   ███   ███    ███   ███    ███ ███▌   ███    █▀  ███   ███   ███    ███   ███    ███ ███    ███ 
+ 					 ███   ███   ███   ███    ███  ▄███▄▄▄▄██▀ ███▌  ▄███▄▄▄     ███   ███  ▄███▄▄▄██▀    ███    ███ ███    ███ 
+ 					 ███   ███   ███ ▀███████████ ▀▀███▀▀▀▀▀   ███▌ ▀▀███▀▀▀     ███   ███ ▀▀███▀▀▀██▄  ▀███████████ ███    ███ 
+ 					 ███   ███   ███   ███    ███ ▀███████████ ███    ███    █▄  ███   ███   ███    ██▄   ███    ███ ███    ███ 
+ 					 ███   ███   ███   ███    ███   ███    ███ ███    ███    ███ ███   ███   ███    ███   ███    ███ ███   ▄███ 
+  					  ▀█   ███   █▀    ███    █▀    ███    ███ █▀     ██████████  ▀█   █▀  ▄█████████▀    ███    █▀  ████████▀  
+                                				    ███    ███                                                                  
+
+
+
+
+
+
+**********************LANGUAGE SELECTOR****************************
+Select your language by pressing the correct letter
+Selectionner votre langue en pressant la bonne lettre
+Seleccione su idioma pulsando la letra correcta
+*******************************************************************
+E | for english
+F | pour français
+S | Para espa
+*******************************************************************
+Choose an option: E
+
+****************************
+0 / Read the rules
+1 / Play against a friend
+2 / Play against a bot
+3 / Winning strategy
+4 / Left the game
+****************************
+Choose an option: 8
+****************************
+0 / Read the rules
+1 / Play against a friend
+2 / Play against a bot
+3 / Winning strategy
+4 / Left the game
+****************************
+Choose an option: 0
+
+
+░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░  Rules of the game  ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░
+
+The game of Marienbad is played with several rows of matches.
+Each player, in turn, must remove a certain number of matches
+from a single row, and this number can be between 1 and all the
+matches in the chosen row.
+The player who has to take the last match loses.
+
+
+
+To go back to the menu press '0'1
+To go back to the menu press '0'0
+
+
+****************************
+0 / Read the rules
+1 / Play against a friend
+2 / Play against a bot
+3 / Winning strategy
+4 / Left the game
+****************************
+Choose an option: 3
+
+******************************************
+The best strategy to win at Marienbad is to leave your opponent with rows
+where the XOR sum (or nim-sum) of the matches in all rows equals zero.
+If you can always reduce one row to achieve this condition, you'll have the advantage.
+******************************************
+To go back to the menu press '0'4
+To go back to the menu press '0'0
+
+****************************
+0 / Read the rules
+1 / Play against a friend
+2 / Play against a bot
+3 / Winning strategy
+4 / Left the game
+****************************
+Choose an option: 2
+
+******BOT DIFFICULTY********
+-1 / Back to menu
+Choose a difficulty by typing a number between 0 et 10
+(0 is easy and 10 the hardest)
+****************************
+
+Which difficulty you want ? 10
+
+Enter your username: 
+Ewan
+
+Choose how many lines do you want: 3
+
+******BOT DIFFICULTY LEVEL: 10******
+
+Plateau: 
+0 :  | 
+1 :  |  |  | 
+2 :  |  |  |  |  | 
+Ewan's turn
+
+Choose a line: 2
+
+Choose the number of sticks you want to remove: 34
+
+Incorrect value !
+
+Choose the number of sticks: 3
+
+Plateau: 
+0 :  | 
+1 :  |  |  | 
+2 :  |  | 
+
+Bot's turn: 
+
+Bot plays randomly.
+
+Bot removes 2 stick(s) from line 1
+
+Plateau: 
+0 :  | 
+1 :  | 
+2 :  |  | 
+Ewan's turn
+
+Choose a line: 2
+
+Choose the number of sticks you want to remove: 2
+
+Plateau: 
+0 :  | 
+1 :  | 
+2 : 
+
+Bot's turn: 
+
+Bot plays randomly.
+
+Bot removes 1 stick(s) from line 1
+
+Plateau: 
+0 :  | 
+1 : 
+2 : 
+Ewan's turn
+
+Choose a line: 0
+
+Choose the number of sticks you want to remove: 1
+
+Plateau: 
+0 : 
+1 : 
+2 : 
+
+The winner is Ewan!
+
+Do you want to play again ? ('0' for no or '1' for yes) 0
+
+
+------------------
+(program exited with code: 0)
 ```
